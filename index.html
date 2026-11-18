@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Etiquetas PWA para hacer instalable la web -->
+    <meta name="theme-color" content="#eab308">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Focaccia Express">
+    
+    <!-- Ícono para iOS y Android -->
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/br8V2cHH/Whats-App-Image-2026-11-10-at-9-36-13-PM.jpg">
+    
+    <!-- Meta etiquetas Open Graph para compartir en WhatsApp, Facebook, etc. -->
+    <meta property="og:title" content="Focaccia Express - Panadería Artesanal">
+    <meta property="og:description" content="Pide nuestros deliciosos panes artesanales, tortas y productos congelados directamente desde nuestra app.">
+    <meta property="og:image" content="https://i.postimg.cc/br8V2cHH/Whats-App-Image-2026-11-10-at-9-36-13-PM.jpg">
+    <meta property="og:url" content="https://conectabp.github.io/FocacciaExpress/">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Focaccia Express">
+    <meta name="twitter:description" content="Panadería Artesanal, menú digital y pedidos en línea.">
+    <meta name="twitter:image" content="https://i.postimg.cc/br8V2cHH/Whats-App-Image-2026-11-10-at-9-36-13-PM.jpg">
+
+    <!-- Manifest incrustado como data URI para mantener un solo archivo -->
+    <link rel="manifest" href="data:application/manifest+json;charset=utf-8,%7B%22name%22%3A%22Focaccia%20Express%22%2C%22short_name%22%3A%22Focaccia%22%2C%22description%22%3A%22Panader%C3%ADa%20Artesanal%20y%20Reposter%C3%ADa%22%2C%22display%22%3A%22standalone%22%2C%22start_url%22%3A%22.%22%2C%22background_color%22%3A%22%230c0a09%22%2C%22theme_color%22%3A%22%23eab308%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fi.postimg.cc%2Fbr8V2cHH%2FWhats-App-Image-2026-11-10-at-9-36-13-PM.jpg%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fjpeg%22%2C%22purpose%22%3A%22any%20maskable%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fi.postimg.cc%2Fbr8V2cHH%2FWhats-App-Image-2026-11-10-at-9-36-13-PM.jpg%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fjpeg%22%2C%22purpose%22%3A%22any%20maskable%22%7D%5D%7D">
+    
+    <title>Tarjeta Digital - Focaccia Express</title>
+    
+    <!-- Tailwind CSS para diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: 'Playfair Display' para elegancia y 'Poppins' para lectura -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Biblioteca para generar el código QR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- ========================================== -->
+    <!-- CÓDIGO DE MÉTRICAS (GOOGLE ANALYTICS 4)    -->
+    <!-- ========================================== -->
+    <!-- NOTA: Reemplaza "G-XXXXXXXXXX" con tu ID de medición real cuando crees tu cuenta -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Configuración base (rastrea visitas a la página)
+      gtag('config', 'G-XXXXXXXXXX');
+
+      // Función personalizada para rastrear eventos importantes (clics en botones)
+      function rastrearEvento(nombreEvento) {
+          gtag('event', nombreEvento, {
+              'event_category': 'Interaccion',
+              'event_label': nombreEvento
+          });
+          console.log("Métrica registrada:", nombreEvento);
+      }
+    </script>
+    <!-- ========================================== -->
+
+    <style>
+        /* Aplicamos las fuentes personalizadas */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0c0a09; /* stone-950 for high contrast elegant backdrop */
+        }
+        .font-logo {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+        
+        /* Efecto de "pulsación" premium para el botón principal */
+        .pulse-effect {
+            animation: pulse 2.5s infinite;
+            box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6); }
+            50% { transform: scale(1.03); box-shadow: 0 0 0 16px rgba(245, 158, 11, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+        
+        /* Estilos personalizados para el scrollbar */
+        .menu-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .menu-scrollbar::-webkit-scrollbar-track {
+            background: #1c1917;
+        }
+        .menu-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #f59e0b;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-stone-950 md:bg-stone-900 md:flex md:items-center md:justify-center min-h-screen">
+
+    <div class="w-full md:max-w-sm bg-gradient-to-b from-stone-900 via-stone-900 to-stone-950 md:shadow-[0_20px_50px_rgba(0,0,0,0.7)] text-center text-stone-100 md:rounded-3xl min-h-screen md:min-h-0 relative overflow-hidden border border-white/10 md:border-white/10">
+        
+        <!-- Encabezado con imagen elegante y degradado profesional -->
+        <div class="bg-white p-1 shadow-md" style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);">
+            <div class="relative">
+                <img src="https://i.postimg.cc/bwnRY34C/Panaderia-rustica-junto-al-horno-de-lena.png" 
+                     alt="Experiencia Focaccia Express" 
+                     class="w-full h-56 object-cover object-center block filter brightness-95"
+                     onerror="this.onerror=null;this.src='https://placehold.co/1000x560/1c1917/f59e0b?text=Focaccia+Express';" 
+                     style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);">
+                <!-- Capa degradada profesional -->
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-black/30 to-transparent" style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);"></div>
+            </div>
+        </div>
+
+        <div class="relative -mt-16 z-10">
+            <div class="relative w-32 h-32 mx-auto z-10">
+                <div class="w-full h-full rounded-full border-4 border-white overflow-hidden bg-stone-900 shadow-2xl flex items-center justify-center ring-4 ring-white/30">
+                    <img src="https://i.postimg.cc/br8V2cHH/Whats-App-Image-2026-11-10-at-9-36-13-PM.jpg" alt="Logo Focaccia Express" class="w-full h-full object-cover">
+                </div>
+                <!-- Insignia de Verificación/Calidad profesional -->
+                <div class="absolute -bottom-1 -right-1 bg-gradient-to-tr from-amber-500 to-yellow-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center border-2 border-stone-900 shadow-lg" title="Calidad Premium">
+                    <i class="fas fa-certificate text-sm"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-6 pb-8">
+            <h1 class="font-logo text-2xl font-bold mt-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500 tracking-wide drop-shadow-sm">Focaccia Express</h1>
+            <p class="font-semibold text-white/80 mt-1 tracking-wider uppercase text-xs">Panadería Artesanal</p>
+            
+            <!-- Botón principal (Ver Pedido) -->
+            <button onclick="document.getElementById('floating-cart-btn').click(); rastrearEvento('Clic_Boton_Principal_Pedido');" class="inline-block bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 text-stone-950 font-bold py-3.5 px-10 rounded-full text-lg mt-5 mb-5 transition-all duration-300 hover:from-amber-400 hover:to-yellow-400 hover:scale-105 transform pulse-effect shadow-[0_4px_20px_rgba(245,158,11,0.4)] w-full max-w-[280px]">
+                <i class="fas fa-shopping-basket text-xl mr-2"></i>
+                Mi Pedido
+            </button>
+
+            <p class="text-white/80 text-xs mb-5 uppercase tracking-wider font-semibold">Conecta con nosotros</p>
+
+            <div class="mb-6">
+                <!-- Fila 1 -->
+                <div class="flex justify-around items-start mb-5">
+                    <!-- Congelados -->
+                    <div class="text-center w-20 group">
+                        <button id="congelados-btn" onclick="rastrearEvento('Menu_Congelados')" class="bg-stone-800/80 hover:bg-amber-500 text-amber-400 hover:text-stone-950 border border-white/10 hover:border-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto backdrop-blur-sm" aria-label="Congelados">
+                            <i class="fas fa-snowflake"></i>
+                        </button>
+                        <p class="text-[11px] mt-2 text-white/90 font-medium">Congelados</p>
+                    </div>
+                    <!-- Panes -->
+                    <div class="text-center w-20 group">
+                        <button id="panes-btn" onclick="rastrearEvento('Menu_Panes')" class="bg-stone-800/80 hover:bg-amber-500 text-amber-400 hover:text-stone-950 border border-white/10 hover:border-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto backdrop-blur-sm" aria-label="Panes">
+                            <i class="fas fa-hamburger"></i>
+                        </button>
+                        <p class="text-[11px] mt-2 text-white/90 font-medium">Panes</p>
+                    </div>
+                    <!-- Tortas -->
+                    <div class="text-center w-20 group">
+                        <button id="tortas-btn" onclick="rastrearEvento('Menu_Tortas')" class="bg-stone-800/80 hover:bg-amber-500 text-amber-400 hover:text-stone-950 border border-white/10 hover:border-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto backdrop-blur-sm" aria-label="Tortas">
+                            <i class="fas fa-cake-candles"></i>
+                        </button>
+                        <p class="text-[11px] mt-2 text-white/90 font-medium">Tortas</p>
+                    </div>
+                </div>
+
+                <!-- Fila 2 -->
+                <div class="flex justify-center gap-12 items-start mb-5">
+                    <!-- WhatsApp -->
+                    <div class="text-center w-20 group">
+                        <a href="https://wa.me/573017824317?text=¡Hola!%20Quisiera%20hacer%20un%20pedido." onclick="rastrearEvento('Clic_WhatsApp_Directo')" target="_blank" rel="noopener noreferrer" class="bg-stone-800/80 hover:bg-amber-500 text-amber-400 hover:text-stone-950 border border-white/10 hover:border-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto backdrop-blur-sm" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <p class="text-[11px] mt-2 text-white/90 font-medium">WhatsApp</p>
+                    </div>
+                    <!-- Cursos -->
+                    <div class="text-center w-20 group">
+                        <button id="cursos-btn" onclick="rastrearEvento('Menu_Cursos')" class="bg-stone-800/80 hover:bg-amber-500 text-amber-400 hover:text-stone-950 border border-white/10 hover:border-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto relative overflow-hidden backdrop-blur-sm" aria-label="Cursos">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span class="absolute top-0 right-0 bg-amber-500 text-stone-950 text-[9px] font-bold px-1 rounded-bl">PRO</span>
+                        </button>
+                        <p class="text-[11px] mt-2 text-white/90 font-medium">Cursos</p>
+                    </div>
+                </div>
+
+                <!-- Fila 3 -->
+                <div class="flex justify-center gap-6 items-start">
+                    <!-- Guardar Contacto -->
+                    <div class="text-center w-20 group">
+                        <a id="save-contact-btn" href="#" onclick="rastrearEvento('Descarga_vCard')" download="FocacciaExpress.vcf" class="bg-stone-800/80 hover:bg-stone-700 text-white/90 border border-white/10 hover:border-white/30 w-12 h-12 rounded-full flex items-center justify-center text-lg transition-all duration-300 group-hover:scale-110 shadow-md mx-auto backdrop-blur-sm" aria-label="Guardar Contacto">
+                            <i class="fas fa-address-book"></i>
+                        </a>
+                        <p class="text-[10px] mt-2 text-white/70">Guardar</p>
+                    </div>
+                    <!-- Compartir / QR -->
+                    <div class="text-center w-20 group">
+                        <button id="share-btn" onclick="rastrearEvento('Clic_Compartir')" class="bg-stone-800/80 hover:bg-stone-700 text-white/90 border border-white/10 hover:border-white/30 w-12 h-12 rounded-full flex items-center justify-center text-lg transition-all duration-300 group-hover:scale-110 shadow-md mx-auto backdrop-blur-sm" aria-label="Compartir / QR">
+                            <i class="fas fa-share-nodes"></i>
+                        </button>
+                        <p class="text-[10px] mt-2 text-white/70">Compartir</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instalación PWA link -->
+            <a href="#" id="install-btn" onclick="rastrearEvento('Clic_Instalar_PWA')" class="cursor-pointer text-xs text-amber-400 hover:text-amber-300 hover:underline font-semibold flex justify-center items-center gap-1">
+                <i class="fas fa-download"></i> ¿Cómo instalar nuestra app?
+            </a>
+
+            <!-- Footer Conecta+ -->
+            <div class="mt-8 pt-4 border-t border-white/10 flex flex-col items-center">
+                
+                <!-- Contador de Visitas Público -->
+                <div class="mb-4 flex items-center gap-2 bg-stone-900/80 px-3 py-1.5 rounded-full border border-stone-800 shadow-inner" title="Visitas a la tarjeta">
+                    <i class="fas fa-eye text-amber-500 text-xs"></i>
+                    <span class="text-xs text-stone-300 font-semibold">Visitas:</span>
+                    <!-- Servicio gratuito de contador (hits.sh) basado en tu URL -->
+                    <img src="https://hits.sh/conectabp.github.io/focacciaexpress.svg?style=flat-square&label=&color=f59e0b&labelColor=1c1917" alt="Contador de Visitas" class="h-4 rounded-sm">
+                </div>
+
+                <p class="text-[10px] text-white/60 mb-2">Este sitio fue creado por <span class="text-white font-bold tracking-wide">Conecta+</span></p>
+                <a href="https://wa.me/573125749480?text=¡Hola!%20Me%20encantó%20la%20tarjeta%20digital%20de%20Focaccia%20Express%20y%20quiero%20crear%20una%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="inline-block items-center justify-center bg-stone-800/90 text-white/90 text-[10px] font-semibold py-1.5 px-4 rounded-full border border-white/10 hover:bg-stone-700 hover:text-white transition-all shadow-sm backdrop-blur-sm">
+                    <i class="fab fa-whatsapp text-green-400 mr-1.5 text-sm"></i> ¡Quiero el mío!
+                </a>
+            </div>
+        </div>
+
+        <!-- Botón Flotante Carrito (Ahora siempre visible) -->
+        <button id="floating-cart-btn" onclick="rastrearEvento('Abrir_Carrito_Flotante')" class="fixed md:absolute bottom-6 right-6 bg-amber-500 text-stone-950 w-14 h-14 rounded-full shadow-[0_0_20px_rgba(245,158,11,0.5)] flex items-center justify-center text-2xl z-40 hover:scale-110 transition-transform">
+            <i class="fas fa-shopping-basket"></i>
+            <span class="cart-badge absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-stone-900 hidden">0</span>
+        </button>
+
+        <!-- Notificación (Toast) -->
+        <div id="toast" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-white px-5 py-2.5 rounded-full shadow-lg z-50 text-sm font-semibold transition-all duration-300 opacity-0 pointer-events-none translate-y-[-20px] flex items-center gap-2">
+            <i class="fas fa-check-circle"></i> <span id="toast-msg">Agregado al carrito</span>
+        </div>
+    </div>
+
+    <!-- Popup: Compartir -->
+    <div id="share-popup" class="fixed inset-0 bg-stone-950 bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50 hidden p-4 transition-opacity">
+        <div class="bg-stone-900 border border-stone-800 rounded-3xl shadow-2xl p-8 max-w-xs w-full text-center relative text-stone-100">
+            <button id="close-share-popup-btn" class="absolute top-3 right-4 text-2xl text-stone-400 hover:text-white transition-colors">&times;</button>
+            <h3 class="text-xl font-bold mb-2 font-logo text-amber-400">Invita a tus amigos</h3>
+            <p class="text-xs text-stone-400 mb-5">Escanea el código para compartir Focaccia Express</p>
+            
+            <div id="qrcode-container" class="flex justify-center mb-5 bg-white p-3 rounded-2xl mx-auto w-max shadow-inner">
+                <!-- El código QR se generará aquí -->
+            </div>
+            
+            <input type="text" id="share-url" class="w-full bg-stone-950 text-stone-300 text-center rounded-xl p-3 border border-stone-800 text-xs focus:outline-none focus:border-amber-500 transition-colors" readonly>
+            <p class="text-[10px] text-stone-500 mt-2">Toca el enlace para copiar</p>
+        </div>
+    </div>
+
+    <!-- Popup: Congelados -->
+    <div id="congelados-popup" class="fixed inset-0 bg-gradient-to-b from-stone-950 to-stone-900 z-50 hidden p-4 text-stone-100">
+        <div class="w-full h-full max-w-lg mx-auto relative flex flex-col">
+            <div class="flex justify-between items-center py-4 px-2 border-b border-stone-800 shrink-0">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-snowflake text-amber-400 text-xl"></i>
+                    <h2 class="font-logo text-2xl text-stone-100 tracking-wide">CONGELADOS</h2>
+                </div>
+                <button id="close-congelados-popup-btn" class="text-2xl text-stone-400 hover:text-amber-400 transition-colors z-10 w-10 h-10 flex items-center justify-center rounded-full bg-stone-800">&times;</button>
+            </div>
+            <div class="overflow-y-auto menu-scrollbar flex-grow py-6 pr-2">
+                <p class="text-sm text-stone-400 mb-6 px-2">Lleva el sabor a tu casa con nuestros productos listos para hornear o freír.</p>
+                
+                <!-- Lista Compacta de Congelados -->
+                <div class="space-y-3 px-2">
+                    <!-- Palitos de Queso -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/YCXqVp9Z/Whats-App-Image-2026-11-12-at-7-40-07-PM.jpg" alt="Palitos de Queso" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Palitos de Queso</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Listos para freír u hornear.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$12.000 <span class="text-[9px] font-normal text-stone-500">(6 und)</span></p>
+                        </div>
+                        <button onclick="addToCart('Palitos de Queso')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Palitos de Queso">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Masa para Pandebonos -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/R0Ff9n6V/IMG-20261118-WA0086.jpg" alt="Masa para Pandebonos" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Masa para Pandebonos</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Sabor tradicional en casa.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$14.000 <span class="text-[9px] font-normal text-stone-500">(500 gr)</span></p>
+                        </div>
+                        <button onclick="addToCart('Masa para Pandebonos')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Masa para Pandebonos">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Masa para Pandequesos -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/R0Ff9n6V/IMG-20261118-WA0086.jpg" alt="Masa para Pandequesos" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Masa para Pandequesos</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Esponjosos y llenos de queso.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$14.000 <span class="text-[9px] font-normal text-stone-500">(500 gr)</span></p>
+                        </div>
+                        <button onclick="addToCart('Masa para Pandequesos')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Masa para Pandequesos">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Masa para Buñuelos -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/pTJs7FgH/IMG-20261118-WA0088.jpg" alt="Masa para Buñuelos" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Masa para Buñuelos</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Esponjosos, doraditos y con el sabor tradicional.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$14.000 <span class="text-[9px] font-normal text-stone-500">(500 gr)</span></p>
+                        </div>
+                        <button onclick="addToCart('Masa para Buñuelos')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Masa para Buñuelos">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Masa para Waffles -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/BQLxPFML/IMG-20261118-WA0087.jpg" alt="Masa para Waffles" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Masa para Waffles</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Desayunos perfectos al instante.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$14.000 <span class="text-[9px] font-normal text-stone-500">(500 gr)</span></p>
+                        </div>
+                        <button onclick="addToCart('Masa para Waffles')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Masa para Waffles">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Base para Pizzas -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/nrnypDSL/Whats-App-Image-2026-11-12-at-8-07-32-PM-(1).jpg" alt="Base para Pizzas" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Base para Pizzas</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Lista para hornear con tus ingredientes favoritos.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$6.000 <span class="text-[9px] font-normal text-stone-500">(6 und)</span></p>
+                        </div>
+                        <button onclick="addToCart('Base para Pizzas')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Base para Pizzas">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-8 text-center px-2">
+                    <button onclick="closePopup('congelados-popup'); document.getElementById('floating-cart-btn').click();" class="block w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-300 hover:brightness-110 shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+                        <i class="fas fa-shopping-basket mr-2"></i> Ver mi Pedido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup: Panes -->
+    <div id="panes-popup" class="fixed inset-0 bg-gradient-to-b from-stone-950 to-stone-900 z-50 hidden p-4 text-stone-100">
+        <div class="w-full h-full max-w-lg mx-auto relative flex flex-col">
+            <div class="flex justify-between items-center py-4 px-2 border-b border-stone-800 shrink-0">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-hamburger text-amber-400 text-xl"></i>
+                    <h2 class="font-logo text-2xl text-stone-100 tracking-wide">PANES</h2>
+                </div>
+                <button id="close-panes-popup-btn" class="text-2xl text-stone-400 hover:text-amber-400 transition-colors z-10 w-10 h-10 flex items-center justify-center rounded-full bg-stone-800">&times;</button>
+            </div>
+            <div class="overflow-y-auto menu-scrollbar flex-grow py-6 pr-2">
+                <p class="text-sm text-stone-400 mb-4 px-2">Panes artesanales horneados con el mejor sabor.</p>
+                
+                <!-- Sabores disponibles para todos los panes -->
+                <div class="mb-5 bg-stone-950/50 p-3 rounded-2xl border border-stone-800/50 mx-2">
+                    <p class="text-[10px] text-amber-400 mb-2 uppercase tracking-wider font-semibold"><i class="fas fa-star text-[9px] mr-1"></i> Sabores disponibles en todas las presentaciones:</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-stone-800/80 border border-white/10 text-stone-200 text-[11px] px-3 py-1 rounded-full shadow-sm">Papa</span>
+                        <span class="bg-stone-800/80 border border-white/10 text-stone-200 text-[11px] px-3 py-1 rounded-full shadow-sm">Ajo</span>
+                        <span class="bg-stone-800/80 border border-white/10 text-stone-200 text-[11px] px-3 py-1 rounded-full shadow-sm">Cebolla</span>
+                        <span class="bg-stone-800/80 border border-white/10 text-stone-200 text-[11px] px-3 py-1 rounded-full shadow-sm">Pimentón</span>
+                    </div>
+                </div>
+
+                <!-- Lista Compacta de Panes -->
+                <div class="space-y-3 px-2">
+                    <!-- Pan de Hamburguesa -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/2jvRvzN9/Whats-App-Image-2026-11-12-at-7-44-56-PM.jpg" alt="Pan de Hamburguesa" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Pan de Hamburguesa</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Ideal para tus recetas clásicas y gourmet.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$7.500 <span class="text-[9px] font-normal text-stone-500">(paquete de 6 und)</span></p>
+                        </div>
+                        <button onclick="addToCart('Pan de Hamburguesa')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Pan de Hamburguesa">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Pan Perro -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/zGQ00gnB/Whats-App-Image-2026-11-12-at-7-47-26-PM.jpg" alt="Pan Perro" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Pan para Perro</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">La textura perfecta que no se rompe.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$7.500 <span class="text-[9px] font-normal text-stone-500">(paquete de 6 und)</span></p>
+                        </div>
+                        <button onclick="addToCart('Pan para Perro')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Pan para Perro">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Croissant -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/Qx4bdTnD/Whats-App-Image-2026-11-12-at-7-54-33-PM.jpg" alt="Croissant" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Croissant Artesanal</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Hojaldre suave, mantequilludo y aromático.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$7.500 <span class="text-[9px] font-normal text-stone-500">(paquete de 6 und)</span></p>
+                        </div>
+                        <button onclick="addToCart('Croissant Artesanal')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Croissant">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Pan Sánduche -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/0j9fbdsP/Whats-App-Image-2026-11-12-at-7-51-16-PM.jpg" alt="Pan Sánduche" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Pan Sánduche</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Tajado, suave y perfecto para el día a día.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$7.500 <span class="text-[9px] font-normal text-stone-500">(paquete de 6 und)</span></p>
+                        </div>
+                        <button onclick="addToCart('Pan Sánduche')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Pan Sánduche">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-10 mb-8 text-center px-2">
+                    <button onclick="closePopup('panes-popup'); document.getElementById('floating-cart-btn').click();" class="block w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-300 hover:brightness-110 shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+                        <i class="fas fa-shopping-basket mr-2"></i> Ver mi Pedido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup: Tortas -->
+    <div id="tortas-popup" class="fixed inset-0 bg-gradient-to-b from-stone-950 to-stone-900 z-50 hidden p-4 text-stone-100">
+        <div class="w-full h-full max-w-lg mx-auto relative flex flex-col">
+            <div class="flex justify-between items-center py-4 px-2 border-b border-stone-800 shrink-0">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-cake-candles text-amber-400 text-xl"></i>
+                    <h2 class="font-logo text-2xl text-stone-100 tracking-wide">TORTAS</h2>
+                </div>
+                <button id="close-tortas-popup-btn" class="text-2xl text-stone-400 hover:text-amber-400 transition-colors z-10 w-10 h-10 flex items-center justify-center rounded-full bg-stone-800">&times;</button>
+            </div>
+            <div class="overflow-y-auto menu-scrollbar flex-grow py-6 pr-2">
+                <p class="text-sm text-stone-400 mb-6 px-2">El dulce sabor para compartir tus mejores momentos.</p>
+                
+                <!-- Lista Compacta de Tortas -->
+                <div class="space-y-3 px-2">
+                    <!-- Torta de Zanahoria -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/VLy19Qm3/IMG-20261118-WA0059.jpg" alt="Torta de Zanahoria" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Torta de Zanahoria</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Suave, esponjosa y con el toque perfecto de especias.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$32.000 <span class="text-[9px] font-normal text-stone-500">(8 porciones)</span></p>
+                        </div>
+                        <button onclick="addToCart('Torta de Zanahoria')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Torta de Zanahoria">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Torta Caramelo-Vainilla -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/TPhNK1Lk/IMG-20261118-WA0061.jpg" alt="Torta Caramelo-Vainilla" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Torta Caramelo-Vainilla</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Dulce combinación clásica que encanta a todos.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$32.000 <span class="text-[9px] font-normal text-stone-500">(8 porciones)</span></p>
+                        </div>
+                        <button onclick="addToCart('Torta Caramelo-Vainilla')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Torta Caramelo-Vainilla">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Torta Red Velvet -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/3RL9ZHsV/IMG-20261118-WA0054.jpg" alt="Torta Red Velvet" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Torta Red Velvet</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Elegancia y sabor inconfundible con frosting especial.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$32.000 <span class="text-[9px] font-normal text-stone-500">(8 porciones)</span></p>
+                        </div>
+                        <button onclick="addToCart('Torta Red Velvet')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Torta Red Velvet">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Torta de Chocolate -->
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/fTgP7YcV/IMG-20261118-WA0060.jpg" alt="Torta de Chocolate" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Torta de Chocolate</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Para los verdaderos amantes del cacao intenso.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$32.000 <span class="text-[9px] font-normal text-stone-500">(8 porciones)</span></p>
+                        </div>
+                        <button onclick="addToCart('Torta de Chocolate')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Torta de Chocolate">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-10 mb-8 text-center px-2">
+                    <button onclick="closePopup('tortas-popup'); document.getElementById('floating-cart-btn').click();" class="block w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-300 hover:brightness-110 shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+                        <i class="fas fa-shopping-basket mr-2"></i> Ver mi Pedido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup: Instalación PWA -->
+    <div id="install-popup" class="fixed inset-0 bg-stone-950 bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50 hidden p-4 transition-opacity">
+        <div class="bg-stone-900 border border-stone-800 rounded-3xl shadow-2xl p-6 max-w-sm w-full relative text-stone-100">
+            <button id="close-install-popup-btn" class="absolute top-3 right-4 text-2xl text-stone-400 hover:text-white transition-colors">&times;</button>
+            
+            <div class="text-center mb-5">
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-stone-950 mx-auto mb-3 shadow-md">
+                    <i class="fas fa-mobile-alt text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold font-logo text-amber-400 tracking-wide">Instalar Focaccia</h3>
+                <p class="text-xs text-stone-400 mt-1">Lleva nuestra panadería siempre en tu celular</p>
+            </div>
+            
+            <!-- Instrucciones iOS -->
+            <div class="mb-4 bg-stone-950 p-4 rounded-2xl border border-stone-800">
+                <h4 class="font-bold text-sm mb-2 flex items-center text-stone-200"><i class="fab fa-apple mr-2 text-stone-400"></i> En iOS (Safari)</h4>
+                <ol class="list-decimal list-inside text-xs text-stone-400 space-y-2">
+                    <li>Toca el botón <strong>Compartir</strong> <i class="fas fa-share-from-square mx-1"></i>.</li>
+                    <li>Desliza hacia arriba y elige <strong class="text-stone-200">"Agregar a inicio"</strong>.</li>
+                    <li>Toca en <strong class="text-stone-200">"Agregar"</strong> arriba a la derecha.</li>
+                </ol>
+            </div>
+            
+            <!-- Instrucciones Android -->
+            <div class="bg-stone-950 p-4 rounded-2xl border border-stone-800">
+                <h4 class="font-bold text-sm mb-2 flex items-center text-stone-200"><i class="fab fa-android mr-2 text-green-400"></i> En Android (Chrome)</h4>
+                <ol class="list-decimal list-inside text-xs text-stone-400 space-y-2">
+                    <li>Toca los <strong>tres puntos</strong> <i class="fas fa-ellipsis-v mx-1"></i> arriba a la derecha.</li>
+                    <li>Elige <strong class="text-stone-200">"Agregar a la pantalla principal"</strong>.</li>
+                    <li>Confirma tocando <strong class="text-stone-200">"Instalar"</strong>.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup: Cursos -->
+    <div id="cursos-popup" class="fixed inset-0 bg-stone-950 bg-opacity-90 backdrop-blur-md flex items-center justify-center z-50 hidden p-4 transition-opacity">
+        <div class="bg-stone-900 border-2 border-amber-500/50 rounded-3xl shadow-[0_0_40px_rgba(245,158,11,0.25)] p-1 max-w-sm w-full relative text-white overflow-hidden">
+            
+            <button id="close-cursos-popup-btn" class="absolute top-3 right-4 text-2xl text-stone-300 drop-shadow-md hover:text-amber-400 z-10 bg-black bg-opacity-40 w-8 h-8 rounded-full flex items-center justify-center transition-colors">&times;</button>
+            
+            <div class="bg-stone-950 rounded-3xl p-5 text-center relative overflow-hidden max-h-[85vh] overflow-y-auto menu-scrollbar">
+                <!-- Efecto visual de fondo -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-amber-500 rounded-full blur-3xl opacity-20"></div>
+                
+                <h3 class="text-3xl font-bold mb-1 mt-2 font-logo text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">CURSOS</h3>
+                <p class="text-amber-400 font-bold uppercase tracking-widest text-[10px] mb-4">Aprende el arte de la panadería</p>
+                
+                <div class="space-y-3 mt-6 mb-5 text-left px-1">
+                    <!-- Panadería -->
+                    <div class="bg-stone-900/90 p-3.5 rounded-2xl border border-stone-800 shadow-md">
+                        <h4 class="font-bold text-amber-400 font-logo mb-1 border-b border-stone-800 pb-1 text-sm"><i class="fas fa-bread-slice mr-1.5"></i> Panadería</h4>
+                        <p class="text-stone-300 text-xs leading-relaxed">Pan de masa madre, panes aromáticos, panes salados, panes dulces, panes rellenos.</p>
+                    </div>
+                    <!-- Repostería -->
+                    <div class="bg-stone-900/90 p-3.5 rounded-2xl border border-stone-800 shadow-md">
+                        <h4 class="font-bold text-amber-400 font-logo mb-1 border-b border-stone-800 pb-1 text-sm"><i class="fas fa-cookie-bite mr-1.5"></i> Repostería</h4>
+                        <p class="text-stone-300 text-xs leading-relaxed">Coberturas, cremas, postres dulces, jaleas, salsas, chocolates.</p>
+                    </div>
+                    <!-- Pastelería -->
+                    <div class="bg-stone-900/90 p-3.5 rounded-2xl border border-stone-800 shadow-md">
+                        <h4 class="font-bold text-amber-400 font-logo mb-1 border-b border-stone-800 pb-1 text-sm"><i class="fas fa-cake-candles mr-1.5"></i> Pastelería</h4>
+                        <p class="text-stone-300 text-xs leading-relaxed">Pastas hojaldradas, tortas, enrollados.</p>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/573017824317?text=¡Hola!%20Quiero%20información%20sobre%20los%20cursos%20de%20panadería,%20repostería%20y%20pastelería." onclick="rastrearEvento('Clic_Boton_Cursos')" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 font-bold py-3.5 px-8 rounded-2xl text-md transition-all duration-300 hover:brightness-110 w-full mb-2 shadow-md">
+                    <i class="fas fa-user-graduate mr-2"></i> Consultar Cursos
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup: Carrito -->
+    <div id="cart-popup" class="fixed inset-0 bg-stone-950 bg-opacity-90 backdrop-blur-md flex items-center justify-center z-50 hidden p-4 transition-opacity">
+        <div class="bg-stone-900 border border-stone-800 rounded-3xl shadow-2xl p-6 max-w-sm w-full relative text-stone-100 flex flex-col max-h-[85vh]">
+            <div class="flex justify-between items-center mb-4 border-b border-stone-800 pb-4 shrink-0">
+                <h3 class="text-xl font-bold font-logo text-amber-400 flex items-center gap-2"><i class="fas fa-shopping-basket"></i> Tu Pedido</h3>
+                <button id="close-cart-popup-btn" class="text-2xl text-stone-400 hover:text-white transition-colors w-8 h-8 flex justify-center items-center rounded-full bg-stone-800 hover:bg-stone-700">&times;</button>
+            </div>
+            
+            <div id="cart-items" class="overflow-y-auto menu-scrollbar flex-grow space-y-3 pr-2 mb-4">
+                <!-- Los items del carrito aparecerán aquí -->
+            </div>
+
+            <div class="shrink-0 pt-4 border-t border-stone-800">
+                <a id="send-order-btn" href="#" onclick="rastrearEvento('Enviar_Pedido_WhatsApp')" target="_top" class="w-full bg-gradient-to-r from-emerald-500 to-green-500 text-white font-bold py-3.5 px-6 rounded-2xl text-lg transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)] flex items-center justify-center gap-2 opacity-50 pointer-events-none">
+                    <i class="fab fa-whatsapp text-xl"></i> Enviar Pedido
+                </a>
+                <button onclick="closePopup('cart-popup')" class="w-full text-stone-400 text-xs mt-4 hover:text-white underline transition-colors">
+                    Seguir comprando
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funciones utilitarias para manejo de popups
+        const openPopup = (popupId) => {
+            document.getElementById(popupId).classList.remove('hidden');
+        };
+        const closePopup = (popupId) => {
+            document.getElementById(popupId).classList.add('hidden');
+        };
+
+        // --- Lógica: Popup de Compartir / QR ---
+        const shareBtn = document.getElementById('share-btn');
+        const sharePopup = 'share-popup';
+        const qrcodeContainer = document.getElementById('qrcode-container');
+        const shareUrlInput = document.getElementById('share-url');
+        let qrcode = null;
+
+        shareBtn.addEventListener('click', () => {
+            const url = 'https://conectabp.github.io/FocacciaExpress/';
+            shareUrlInput.value = url;
+            
+            // Lógica para copiar al portapapeles al hacer clic en el input
+            shareUrlInput.onclick = () => {
+                shareUrlInput.select();
+                try {
+                    if (navigator.clipboard) { 
+                        navigator.clipboard.writeText(url).then(() => {
+                            const originalValue = shareUrlInput.value;
+                            shareUrlInput.value = "¡Enlace copiado!";
+                            setTimeout(() => shareUrlInput.value = originalValue, 2000);
+                        }).catch(err => { 
+                            document.execCommand('copy');
+                        });
+                    } else {
+                        document.execCommand('copy');
+                    }
+                } catch (err) {
+                    console.error('Error al copiar:', err);
+                }
+            };
+
+            // Generar QR si no existe
+            qrcodeContainer.innerHTML = '';
+            qrcode = new QRCode(qrcodeContainer, {
+                text: url,
+                width: 160,
+                height: 160,
+                colorDark : "#0c0a09", // stone-950
+                colorLight : "#ffffff", // blanco
+                correctLevel : QRCode.CorrectLevel.H
+            });
+            
+            openPopup(sharePopup);
+        });
+
+        document.getElementById('close-share-popup-btn').addEventListener('click', () => closePopup(sharePopup));
+        document.getElementById(sharePopup).addEventListener('click', (e) => {
+            if (e.target.id === sharePopup) closePopup(sharePopup);
+        });
+
+        // --- Lógica: Popup de Congelados ---
+        const congeladosBtn = document.getElementById('congelados-btn');
+        const congeladosPopup = 'congelados-popup';
+
+        congeladosBtn.addEventListener('click', () => openPopup(congeladosPopup));
+        document.getElementById('close-congelados-popup-btn').addEventListener('click', () => closePopup(congeladosPopup));
+        document.getElementById(congeladosPopup).addEventListener('click', (e) => {
+            if (e.target.id === congeladosPopup) closePopup(congeladosPopup);
+        });
+
+        // --- Lógica: Popup de Panes ---
+        const panesBtn = document.getElementById('panes-btn');
+        const panesPopup = 'panes-popup';
+
+        panesBtn.addEventListener('click', () => openPopup(panesPopup));
+        document.getElementById('close-panes-popup-btn').addEventListener('click', () => closePopup(panesPopup));
+        document.getElementById(panesPopup).addEventListener('click', (e) => {
+            if (e.target.id === panesPopup) closePopup(panesPopup);
+        });
+
+        // --- Lógica: Popup de Tortas ---
+        const tortasBtn = document.getElementById('tortas-btn');
+        const tortasPopup = 'tortas-popup';
+
+        tortasBtn.addEventListener('click', () => openPopup(tortasPopup));
+        document.getElementById('close-tortas-popup-btn').addEventListener('click', () => closePopup(tortasPopup));
+        document.getElementById(tortasPopup).addEventListener('click', (e) => {
+            if (e.target.id === tortasPopup) closePopup(tortasPopup);
+        });
+
+        // --- Lógica: Guardar Contacto (vCard) ---
+        const saveContactBtn = document.getElementById('save-contact-btn');
+        const vCardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Focaccia Express\nORG:Focaccia Express\nTEL;TYPE=WORK,VOICE:+573017824317\nTEL;TYPE=CELL,VOICE:+573017824317\nADR;TYPE=WORK:;;Tu Dirección;Tu Ciudad;Tu Departamento;;Colombia\nURL:${window.location.href}\nEND:VCARD`;
+        saveContactBtn.href = `data:text/vcard;charset=utf-8,${encodeURIComponent(vCardData)}`;
+
+        // --- Lógica: Popup de Instalación ---
+        const installBtn = document.getElementById('install-btn');
+        const installPopup = 'install-popup';
+
+        if (installBtn) {
+            installBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openPopup(installPopup);
+            });
+        }
+        document.getElementById('close-install-popup-btn')?.addEventListener('click', () => closePopup(installPopup));
+        document.getElementById(installPopup)?.addEventListener('click', (e) => {
+            if (e.target.id === installPopup) closePopup(installPopup);
+        });
+        
+        // --- Lógica: Popup de Cursos ---
+        const cursosBtn = document.getElementById('cursos-btn');
+        const cursosPopup = 'cursos-popup';
+
+        if (cursosBtn) {
+            cursosBtn.addEventListener('click', () => openPopup(cursosPopup));
+        }
+        document.getElementById('close-cursos-popup-btn')?.addEventListener('click', () => closePopup(cursosPopup));
+        document.getElementById(cursosPopup)?.addEventListener('click', (e) => {
+            if (e.target.id === cursosPopup) closePopup(cursosPopup);
+        });
+
+        // --- Lógica: Carrito de Compras ---
+        const cartPopup = 'cart-popup';
+        const floatingCartBtn = document.getElementById('floating-cart-btn');
+        const closeCartBtn = document.getElementById('close-cart-popup-btn');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const sendOrderBtn = document.getElementById('send-order-btn');
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-msg');
+        let cart = {}; // Almacena { "Nombre del producto": cantidad }
+
+        floatingCartBtn.addEventListener('click', () => {
+            renderCart();
+            openPopup(cartPopup);
+        });
+
+        closeCartBtn.addEventListener('click', () => closePopup(cartPopup));
+        document.getElementById(cartPopup).addEventListener('click', (e) => {
+            if (e.target.id === cartPopup) closePopup(cartPopup);
+        });
+
+        window.addToCart = (itemName) => {
+            if (cart[itemName]) {
+                cart[itemName]++;
+            } else {
+                cart[itemName] = 1;
+            }
+            updateCartBadge();
+            showToast(itemName);
+            rastrearEvento(`Agregar_${itemName.replace(/\s+/g, '_')}`);
+        };
+
+        window.decreaseCart = (itemName) => {
+            if (cart[itemName]) {
+                cart[itemName]--;
+                if (cart[itemName] <= 0) delete cart[itemName];
+            }
+            updateCartBadge();
+            renderCart();
+        };
+
+        window.increaseCart = (itemName) => {
+            if (cart[itemName]) {
+                cart[itemName]++;
+            }
+            updateCartBadge();
+            renderCart();
+        };
+
+        const updateCartBadge = () => {
+            const count = Object.values(cart).reduce((a, b) => a + b, 0);
+            const badges = document.querySelectorAll('.cart-badge');
+            
+            badges.forEach(b => {
+                b.innerText = count;
+                if (count > 0) b.classList.remove('hidden');
+                else b.classList.add('hidden');
+            });
+            
+            if (count > 0) {
+                sendOrderBtn.classList.remove('opacity-50', 'pointer-events-none');
+                sendOrderBtn.classList.add('hover:brightness-110');
+            } else {
+                sendOrderBtn.classList.add('opacity-50', 'pointer-events-none');
+                sendOrderBtn.classList.remove('hover:brightness-110');
+            }
+            updateWhatsAppLink();
+        };
+
+        const renderCart = () => {
+            const items = Object.entries(cart);
+            if (items.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div class="text-center py-10">
+                        <i class="fas fa-basket-shopping text-4xl text-stone-700 mb-3"></i>
+                        <p class="text-stone-400 text-sm">Tu pedido está vacío.</p>
+                    </div>`;
+                return;
+            }
+
+            cartItemsContainer.innerHTML = items.map(([name, qty]) => `
+                <div class="bg-stone-800/60 rounded-2xl p-3 flex justify-between items-center border border-stone-700 shadow-sm">
+                    <div class="flex-1 pr-3">
+                        <h5 class="text-sm font-bold text-stone-200 leading-tight">${name}</h5>
+                    </div>
+                    <div class="flex items-center gap-3 bg-stone-950 rounded-full px-2 py-1 border border-stone-800">
+                        <button onclick="decreaseCart('${name}')" class="text-stone-400 hover:text-amber-400 w-6 h-6 flex items-center justify-center font-bold text-xl">&minus;</button>
+                        <span class="text-white text-sm w-4 text-center font-bold">${qty}</span>
+                        <button onclick="increaseCart('${name}')" class="text-stone-400 hover:text-amber-400 w-6 h-6 flex items-center justify-center font-bold text-xl">+</button>
+                    </div>
+                </div>
+            `).join('');
+        };
+
+        const showToast = (itemName) => {
+            toastMsg.innerText = `1x ${itemName} agregado`;
+            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-[-20px]');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-[-20px]');
+            }, 2000);
+        };
+
+        const updateWhatsAppLink = () => {
+            const items = Object.entries(cart);
+            if (items.length === 0) {
+                sendOrderBtn.href = "#";
+                return;
+            }
+
+            let text = "¡Hola! Quisiera hacer el siguiente pedido en Focaccia Express:\n\n";
+            items.forEach(([name, qty]) => {
+                text += `🍞 *${qty}x* ${name}\n`;
+            });
+            text += "\n¡Gracias!";
+
+            const encodedText = encodeURIComponent(text);
+            sendOrderBtn.href = `https://api.whatsapp.com/send?phone=573017824317&text=${encodedText}`;
+        };
+
+        // --- Lógica PWA: Service Worker ---
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swCode = `
+                    self.addEventListener('install', (e) => { self.skipWaiting(); });
+                    self.addEventListener('activate', (e) => { e.waitUntil(clients.claim()); });
+                    self.addEventListener('fetch', (e) => { }); 
+                `;
+                const blob = new Blob([swCode], { type: 'application/javascript' });
+                navigator.serviceWorker.register(URL.createObjectURL(blob))
+                    .then(() => console.log('PWA Service Worker Registrado para Focaccia Express.'))
+                    .catch((err) => console.log('Error registrando Service Worker:', err));
+            });
+        }
+    </script>
+</body>
+</html>
