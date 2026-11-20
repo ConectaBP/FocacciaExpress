@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K73NM96D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Protección de interfaz sin bloquear botones ni campos de texto -->
+
+    <!-- Protección de interfaz y disuasión -->
     <script>
         (function() {
             const isEditable = (el) => {
@@ -32,61 +38,43 @@
             });
         })();
     </script>
-
+    
     <!-- Etiquetas PWA para hacer instalable la web -->
-    <meta name="theme-color" content="#F5B800">
+    <meta name="theme-color" content="#eab308">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Coyote Express">
+    <meta name="apple-mobile-web-app-title" content="Focaccia Express">
     
     <!-- Ícono para iOS y Android -->
-    <link rel="apple-touch-icon" href="https://i.postimg.cc/5yJ3VRg6/Whats-App-Image-2026-11-18-at-7-28-19-PM.jpg">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/br8V2cHH/Whats-App-Image-2026-11-10-at-9-36-13-PM.jpg">
     
     <!-- Meta etiquetas Open Graph para compartir en WhatsApp, Facebook, etc. -->
-    <meta property="og:title" content="Coyote Express - Comidas Rápidas & Asados">
-    <meta property="og:description" content="¡Despierta el antojo! Pide nuestros Productos Estrella, Salchipapas, Hamburguesas, Perros y Asados al carbón directamente desde nuestra app.">
-    <meta property="og:image" content="https://i.postimg.cc/5yJ3VRg6/Whats-App-Image-2026-11-18-at-7-28-19-PM.jpg">
-    <meta property="og:url" content="https://soyconectaplus.com/CoyoteExpress/">
+    <meta property="og:title" content="Focaccia Express - Panadería Artesanal">
+    <meta property="og:description" content="Pide nuestros deliciosos panes artesanales, tortas y productos congelados directamente desde nuestra app.">
+    <meta property="og:image" content="https://i.postimg.cc/br8V2cHH/Whats-App-Image-2026-11-10-at-9-36-13-PM.jpg">
+    <meta property="og:url" content="https://soyconectaplus.com/FocacciaExpress/">
     <meta property="og:type" content="website">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Coyote Express">
-    <meta name="twitter:description" content="Comidas Rápidas, Asados, Salchipapas y Productos Estrella.">
-    <meta name="twitter:image" content="https://i.postimg.cc/5yJ3VRg6/Whats-App-Image-2026-11-18-at-7-28-19-PM.jpg">
+    <meta name="twitter:title" content="Focaccia Express">
+    <meta name="twitter:description" content="Panadería Artesanal, menú digital y pedidos en línea.">
+    <meta name="twitter:image" content="https://i.postimg.cc/br8V2cHH/Whats-App-Image-2026-11-10-at-9-36-13-PM.jpg">
 
     <!-- Manifest incrustado como data URI para mantener un solo archivo -->
-    <link rel="manifest" href="data:application/manifest+json;charset=utf-8,%7B%22name%22%3A%22Coyote%20Express%22%2C%22short_name%22%3A%22Coyote%22%2C%22description%22%3A%22Comidas%20R%C3%A1pidas%20y%20Asados%20al%20Carb%C3%B3n%22%2C%22display%22%3A%22standalone%22%2C%22start_url%22%3A%22.%22%2C%22background_color%22%3A%22%23121212%22%2C%22theme_color%22%3A%22%23F5B800%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fi.postimg.cc%2F5yJ3VRg6%2FWhats-App-Image-2026-11-18-at-7-28-19-PM.jpg%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fjpeg%22%2C%22purpose%22%3A%22any%20maskable%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fi.postimg.cc%2F5yJ3VRg6%2FWhats-App-Image-2026-11-18-at-7-28-19-PM.jpg%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fjpeg%22%2C%22purpose%22%3A%22any%20maskable%22%7D%5D%7D">
+    <link rel="manifest" href="data:application/manifest+json;charset=utf-8,%7B%22name%22%3A%22Focaccia%20Express%22%2C%22short_name%22%3A%22Focaccia%22%2C%22description%22%3A%22Panader%C3%ADa%20Artesanal%20y%20Reposter%C3%ADa%22%2C%22display%22%3A%22standalone%22%2C%22start_url%22%3A%22.%22%2C%22background_color%22%3A%22%230c0a09%22%2C%22theme_color%22%3A%22%23eab308%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fi.postimg.cc%2Fbr8V2cHH%2FWhats-App-Image-2026-11-10-at-9-36-13-PM.jpg%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fjpeg%22%2C%22purpose%22%3A%22any%20maskable%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fi.postimg.cc%2Fbr8V2cHH%2FWhats-App-Image-2026-11-10-at-9-36-13-PM.jpg%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fjpeg%22%2C%22purpose%22%3A%22any%20maskable%22%7D%5D%7D">
     
-    <title>Tarjeta Digital - Coyote Express</title>
+    <title>Tarjeta Digital - Focaccia Express</title>
     
     <!-- Tailwind CSS para diseño moderno y responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        coyote: {
-                            yellow: '#F5B800',
-                            black: '#121212',
-                            dark: '#0A0A0A',
-                            gray: '#6E777A',
-                            orange: '#F24405',
-                            beige: '#DFD5C5'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     
     <!-- Font Awesome para los íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Google Fonts: 'Oswald' para fuerza western/urbana y 'Poppins' para lectura -->
+    <!-- Google Fonts: 'Playfair Display' para elegancia y 'Poppins' para lectura -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Biblioteca para generar el código QR -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -94,31 +82,31 @@
     <!-- ========================================== -->
     <!-- CÓDIGO DE MÉTRICAS (GOOGLE ANALYTICS 4)    -->
     <!-- ========================================== -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YVY6R0B44P"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'G-XXXXXXXXXX');
 
       function rastrearEvento(nombreEvento) {
           try {
               if (typeof gtag === 'function') {
                   gtag('event', nombreEvento, {
-                      'event_category': 'Interaccion_Coyote',
+                      'event_category': 'Interaccion',
                       'event_label': nombreEvento
                   });
               }
-          } catch (e) {
-              // No interrumpir la interacción si el bloqueador impide analytics
-          }
+          } catch (e) {}
+          console.log("Métrica registrada:", nombreEvento);
       }
     </script>
 
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0A0A0A;
+            background-color: #0c0a09;
             -webkit-user-select: none;
             user-select: none;
         }
@@ -128,967 +116,699 @@
         }
         img {
             -webkit-user-drag: none;
-            pointer-events: none;
         }
-        .font-brand {
-            font-family: 'Oswald', sans-serif;
-            letter-spacing: 0.04em;
+        .font-logo {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
         }
         
-        .pulse-coyote {
-            animation: pulseCoyote 2.3s infinite;
-            box-shadow: 0 0 0 0 rgba(242, 68, 5, 0.7);
+        .pulse-effect {
+            animation: pulse 2.5s infinite;
+            box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6);
         }
-        @keyframes pulseCoyote {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(242, 68, 5, 0.7); }
-            50% { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(245, 184, 0, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(242, 68, 5, 0); }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6); }
+            50% { transform: scale(1.03); box-shadow: 0 0 0 16px rgba(245, 158, 11, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
         }
         
         .menu-scrollbar::-webkit-scrollbar {
-            width: 5px;
+            width: 6px;
         }
         .menu-scrollbar::-webkit-scrollbar-track {
-            background: #121212;
+            background: #1c1917;
         }
         .menu-scrollbar::-webkit-scrollbar-thumb {
-            background-color: #F5B800;
+            background-color: #f59e0b;
             border-radius: 10px;
         }
     </style>
 </head>
-<body class="bg-coyote-dark md:bg-[#18181b] md:flex md:items-center md:justify-center min-h-screen">
+<body class="bg-stone-950 md:bg-stone-900 md:flex md:items-center md:justify-center min-h-screen">
 
-    <!-- Contenedor Principal Estilo Tarjeta Digital Móvil -->
-    <div class="w-full md:max-w-sm bg-gradient-to-b from-coyote-black via-[#161616] to-coyote-dark md:shadow-[0_25px_60px_rgba(0,0,0,0.85)] text-center text-white md:rounded-3xl min-h-screen md:min-h-0 relative overflow-hidden border border-coyote-yellow/20">
+    <div class="w-full md:max-w-sm bg-gradient-to-b from-stone-900 via-stone-900 to-stone-950 md:shadow-[0_20px_50px_rgba(0,0,0,0.7)] text-center text-stone-100 md:rounded-3xl min-h-screen md:min-h-0 relative overflow-hidden border border-white/10 md:border-white/10">
         
-        <!-- Encabezado con imagen de parrilla/comidas rápidas y borde amarillo/naranja -->
-        <div class="bg-gradient-to-r from-coyote-yellow via-coyote-orange to-coyote-yellow p-1 shadow-lg" style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);">
-            <div class="relative bg-coyote-black">
-                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80" 
-                     alt="Experiencia Coyote Express" 
-                     class="w-full h-56 object-cover object-center block filter brightness-90 contrast-110"
-                     onerror="this.onerror=null;this.src='https://placehold.co/900x560/121212/F5B800?text=COYOTE+EXPRESS';" 
+        <!-- Encabezado con imagen elegante y degradado profesional -->
+        <div class="bg-white p-1 shadow-md" style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);">
+            <div class="relative">
+                <img src="https://i.postimg.cc/bwnRY34C/Panaderia-rustica-junto-al-horno-de-lena.png" 
+                     alt="Experiencia Focaccia Express" 
+                     class="w-full h-56 object-cover object-center block filter brightness-95"
+                     onerror="this.onerror=null;this.src='https://placehold.co/1000x560/1c1917/f59e0b?text=Focaccia+Express';" 
                      style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);">
-                <div class="absolute inset-0 bg-gradient-to-t from-coyote-black via-black/40 to-transparent pointer-events-none" style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);"></div>
-                
-                <!-- Etiqueta inteligente de estado -->
-                <div id="store-status-badge" class="absolute top-3 left-1/2 -translate-x-1/2 bg-coyote-black/90 backdrop-blur-md border border-coyote-yellow/40 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md whitespace-nowrap transition-colors">
-                    <span id="store-status-dot" class="w-2 h-2 rounded-full bg-coyote-orange animate-ping"></span>
-                    <span id="store-status-text" class="text-[10px] font-semibold text-coyote-beige tracking-wide uppercase">Lun - Dom: 5:00 PM a 11:30 PM</span>
-                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-black/30 to-transparent" style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);"></div>
             </div>
         </div>
 
-        <!-- Logo Circular Central -->
-        <div class="relative -mt-16 z-10 pointer-events-none">
+        <div class="relative -mt-16 z-10">
             <div class="relative w-32 h-32 mx-auto z-10">
-                <div class="w-full h-full rounded-full border-4 border-coyote-yellow overflow-hidden bg-coyote-black shadow-[0_10px_30px_rgba(245,184,0,0.3)] flex items-center justify-center ring-4 ring-coyote-orange/40">
-                    <img src="https://i.postimg.cc/5yJ3VRg6/Whats-App-Image-2026-11-18-at-7-28-19-PM.jpg" alt="Logo Coyote Express" class="w-full h-full object-cover">
+                <div class="w-full h-full rounded-full border-4 border-white overflow-hidden bg-stone-900 shadow-2xl flex items-center justify-center ring-4 ring-white/30">
+                    <img src="https://i.postimg.cc/br8V2cHH/Whats-App-Image-2026-11-10-at-9-36-13-PM.jpg" alt="Logo Focaccia Express" class="w-full h-full object-cover">
                 </div>
-                <div class="absolute -bottom-1 -right-1 bg-gradient-to-tr from-coyote-orange to-coyote-yellow text-coyote-black w-8 h-8 rounded-full flex items-center justify-center border-2 border-coyote-black shadow-lg" title="Sabor Auténtico">
-                    <i class="fas fa-fire text-sm"></i>
+                <div class="absolute -bottom-1 -right-1 bg-gradient-to-tr from-amber-500 to-yellow-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center border-2 border-stone-900 shadow-lg" title="Calidad Premium">
+                    <i class="fas fa-certificate text-sm"></i>
                 </div>
             </div>
         </div>
 
-        <!-- Cuerpo de la Tarjeta -->
-        <div class="px-5 pb-8">
-            <h1 class="font-brand text-3xl font-bold mt-3 text-transparent bg-clip-text bg-gradient-to-r from-coyote-yellow via-amber-300 to-coyote-orange uppercase tracking-wider drop-shadow-sm">
-                Coyote Express
-            </h1>
-            <p class="font-semibold text-coyote-beige mt-0.5 tracking-widest uppercase text-xs">
-                Comidas Rápidas & Asados
-            </p>
+        <div class="px-6 pb-8">
+            <h1 class="font-logo text-2xl font-bold mt-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500 tracking-wide drop-shadow-sm">Focaccia Express</h1>
+            <p class="font-semibold text-white/80 mt-1 tracking-wider uppercase text-xs">Panadería Artesanal</p>
             
-            <!-- Botones de Acción Destacados: Mi Pedido y Productos Estrella -->
-            <div class="mt-5 mb-6 space-y-3 flex flex-col items-center">
-                <button type="button" id="main-order-btn" class="bg-gradient-to-r from-coyote-yellow via-amber-400 to-coyote-yellow text-coyote-black font-bold py-3.5 px-8 rounded-full text-base transition-all duration-300 hover:brightness-110 hover:scale-105 transform pulse-coyote shadow-[0_4px_20px_rgba(245,184,0,0.35)] w-full max-w-[290px] flex items-center justify-center gap-2 uppercase tracking-wide cursor-pointer">
-                    <i class="fas fa-shopping-bag text-lg"></i>
-                    <span>Mi Pedido</span>
-                    <span class="cart-badge-inline bg-coyote-orange text-white text-xs font-extrabold px-2 py-0.5 rounded-full hidden">0</span>
-                </button>
+            <!-- Botón principal (Ver Pedido) -->
+            <button type="button" onclick="document.getElementById('floating-cart-btn').click(); rastrearEvento('Clic_Boton_Principal_Pedido');" class="inline-block bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 text-stone-950 font-bold py-3.5 px-10 rounded-full text-lg mt-5 mb-5 transition-all duration-300 hover:from-amber-400 hover:to-yellow-400 hover:scale-105 transform pulse-effect shadow-[0_4px_20px_rgba(245,158,11,0.4)] w-full max-w-[280px]">
+                <i class="fas fa-shopping-basket text-xl mr-2"></i>
+                Mi Pedido
+            </button>
 
-                <button type="button" id="estrella-btn" class="bg-gradient-to-r from-coyote-orange to-orange-600 hover:from-orange-500 hover:to-coyote-orange text-white font-bold py-3 px-6 rounded-2xl text-sm transition-all duration-300 hover:scale-[1.03] shadow-[0_4px_18px_rgba(242,68,5,0.4)] border border-coyote-yellow/50 w-full max-w-[290px] flex items-center justify-between group cursor-pointer">
-                    <span class="flex items-center gap-2.5">
-                        <span class="bg-coyote-yellow text-coyote-black w-7 h-7 rounded-lg flex items-center justify-center shadow-sm group-hover:rotate-12 transition-transform">
-                            <i class="fas fa-star text-xs"></i>
-                        </span>
-                        <span class="uppercase tracking-wider font-brand text-base">Productos Estrella</span>
-                    </span>
-                    <span class="bg-coyote-black/60 text-coyote-yellow text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-coyote-yellow/30">
-                        TOP 7
-                    </span>
-                </button>
-            </div>
-
-            <p class="text-coyote-beige/80 text-[11px] mb-4 uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
-                <span class="h-px w-6 bg-coyote-gray/40"></span>
-                Nuestra Carta
-                <span class="h-px w-6 bg-coyote-gray/40"></span>
-            </p>
+            <p class="text-white/80 text-xs mb-5 uppercase tracking-wider font-semibold">Conecta con nosotros</p>
 
             <div class="mb-6">
-                <!-- Fila 1: Categorías del Menú -->
-                <div class="grid grid-cols-4 gap-2 items-start mb-5">
-                    <div class="text-center group">
-                        <button type="button" id="salchipapas-btn" class="bg-[#1e1e1e] hover:bg-coyote-yellow text-coyote-yellow hover:text-coyote-black border border-coyote-gray/30 hover:border-coyote-yellow w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto cursor-pointer" aria-label="Salchipapas">
-                            <i class="fas fa-utensils"></i>
+                <!-- Fila 1 -->
+                <div class="flex justify-around items-start mb-5">
+                    <div class="text-center w-20 group">
+                        <button type="button" id="congelados-btn" onclick="rastrearEvento('Menu_Congelados')" class="bg-stone-800/80 hover:bg-amber-500 text-amber-400 hover:text-stone-950 border border-white/10 hover:border-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto backdrop-blur-sm" aria-label="Congelados">
+                            <i class="fas fa-snowflake"></i>
                         </button>
-                        <p class="text-[11px] mt-2 text-coyote-beige font-medium leading-tight">Salchipapas</p>
+                        <p class="text-[11px] mt-2 text-white/90 font-medium">Congelados</p>
                     </div>
-                    <div class="text-center group">
-                        <button type="button" id="burgers-btn" class="bg-[#1e1e1e] hover:bg-coyote-yellow text-coyote-yellow hover:text-coyote-black border border-coyote-gray/30 hover:border-coyote-yellow w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto cursor-pointer" aria-label="Hamburguesas y Perros">
-                            <i class="fas fa-burger"></i>
+                    <div class="text-center w-20 group">
+                        <button type="button" id="panes-btn" onclick="rastrearEvento('Menu_Panes')" class="bg-stone-800/80 hover:bg-amber-500 text-amber-400 hover:text-stone-950 border border-white/10 hover:border-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto backdrop-blur-sm" aria-label="Panes">
+                            <i class="fas fa-hamburger"></i>
                         </button>
-                        <p class="text-[11px] mt-2 text-coyote-beige font-medium leading-tight">Burgers & Perros</p>
+                        <p class="text-[11px] mt-2 text-white/90 font-medium">Panes</p>
                     </div>
-                    <div class="text-center group">
-                        <button type="button" id="asados-btn" class="bg-[#1e1e1e] hover:bg-coyote-orange text-coyote-orange hover:text-white border border-coyote-gray/30 hover:border-coyote-orange w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto cursor-pointer" aria-label="Asados y Picadas">
-                            <i class="fas fa-fire-burner"></i>
+                    <div class="text-center w-20 group">
+                        <button type="button" id="tortas-btn" onclick="rastrearEvento('Menu_Tortas')" class="bg-stone-800/80 hover:bg-amber-500 text-amber-400 hover:text-stone-950 border border-white/10 hover:border-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto backdrop-blur-sm" aria-label="Tortas">
+                            <i class="fas fa-cake-candles"></i>
                         </button>
-                        <p class="text-[11px] mt-2 text-coyote-beige font-medium leading-tight">Asados & Picadas</p>
-                    </div>
-                    <div class="text-center group">
-                        <button type="button" id="bebidas-btn" class="bg-[#1e1e1e] hover:bg-coyote-yellow text-coyote-yellow hover:text-coyote-black border border-coyote-gray/30 hover:border-coyote-yellow w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto cursor-pointer" aria-label="Bebidas y Adiciones">
-                            <i class="fas fa-bottle-droplet"></i>
-                        </button>
-                        <p class="text-[11px] mt-2 text-coyote-beige font-medium leading-tight">Bebidas</p>
+                        <p class="text-[11px] mt-2 text-white/90 font-medium">Tortas</p>
                     </div>
                 </div>
 
-                <p class="text-coyote-beige/80 text-[11px] mb-4 uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
-                    <span class="h-px w-6 bg-coyote-gray/40"></span>
-                    Conecta con Nosotros
-                    <span class="h-px w-6 bg-coyote-gray/40"></span>
-                </p>
-
-                <!-- Fila 2: WhatsApp, Ubicación, Facebook, Instagram y TikTok -->
-                <div class="grid grid-cols-5 gap-1.5 items-start mb-5">
-                    <div class="text-center group">
-                        <a href="https://wa.me/573168324287?text=¡Hola%20Coyote%20Express!%20Quisiera%20hacer%20un%20pedido." onclick="rastrearEvento('Clic_WhatsApp_Directo')" target="_blank" rel="noopener noreferrer" class="bg-[#1e1e1e] hover:bg-emerald-500 text-emerald-400 hover:text-coyote-black border border-coyote-gray/30 hover:border-emerald-400 w-12 h-12 rounded-2xl flex items-center justify-center text-xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto" aria-label="WhatsApp">
+                <!-- Fila 2 -->
+                <div class="flex justify-center gap-12 items-start mb-5">
+                    <div class="text-center w-20 group">
+                        <a href="https://wa.me/573017824317?text=¡Hola!%20Quisiera%20hacer%20un%20pedido." onclick="rastrearEvento('Clic_WhatsApp_Directo')" target="_blank" rel="noopener noreferrer" class="bg-stone-800/80 hover:bg-amber-500 text-amber-400 hover:text-stone-950 border border-white/10 hover:border-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto backdrop-blur-sm" aria-label="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <p class="text-[10px] mt-1.5 text-coyote-beige font-medium">WhatsApp</p>
+                        <p class="text-[11px] mt-2 text-white/90 font-medium">WhatsApp</p>
                     </div>
-                    <div class="text-center group">
-                        <button type="button" id="location-btn" class="bg-[#1e1e1e] hover:bg-coyote-orange text-coyote-orange hover:text-white border border-coyote-gray/30 hover:border-coyote-orange w-12 h-12 rounded-2xl flex items-center justify-center text-xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto cursor-pointer" aria-label="Ubicación">
-                            <i class="fas fa-location-dot"></i>
+                    <div class="text-center w-20 group">
+                        <button type="button" id="cursos-btn" onclick="rastrearEvento('Menu_Cursos')" class="bg-stone-800/80 hover:bg-amber-500 text-amber-400 hover:text-stone-950 border border-white/10 hover:border-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto relative overflow-hidden backdrop-blur-sm" aria-label="Cursos">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span class="absolute top-0 right-0 bg-amber-500 text-stone-950 text-[9px] font-bold px-1 rounded-bl">PRO</span>
                         </button>
-                        <p class="text-[10px] mt-1.5 text-coyote-beige font-medium">Ubicación</p>
-                    </div>
-                    <div class="text-center group">
-                        <a href="https://www.facebook.com/share/1R4vQWtB2B/" onclick="rastrearEvento('Clic_Facebook')" target="_blank" rel="noopener noreferrer" class="bg-[#1e1e1e] hover:bg-blue-600 text-blue-400 hover:text-white border border-coyote-gray/30 hover:border-blue-500 w-12 h-12 rounded-2xl flex items-center justify-center text-xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <p class="text-[10px] mt-1.5 text-coyote-beige font-medium">Facebook</p>
-                    </div>
-                    <div class="text-center group">
-                        <a href="https://www.instagram.com/coyotexpresspb?cnvx=MW5tZmFvcTk3ajl3Mw%3D%3D&utm_source=qr" onclick="rastrearEvento('Clic_Instagram')" target="_blank" rel="noopener noreferrer" class="bg-[#1e1e1e] hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-600 hover:to-purple-600 text-pink-400 hover:text-white border border-coyote-gray/30 hover:border-pink-500 w-12 h-12 rounded-2xl flex items-center justify-center text-xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <p class="text-[10px] mt-1.5 text-coyote-beige font-medium">Instagram</p>
-                    </div>
-                    <div class="text-center group">
-                        <a href="https://www.tiktok.com/@coyote.express?_r=1&_t=ZS-9BZKEZOgxec" onclick="rastrearEvento('Clic_TikTok')" target="_blank" rel="noopener noreferrer" class="bg-[#1e1e1e] hover:bg-black text-white hover:text-[#25F4EE] border border-coyote-gray/30 hover:border-[#FE2C55] w-12 h-12 rounded-2xl flex items-center justify-center text-xl transition-all duration-300 group-hover:scale-110 shadow-lg mx-auto" aria-label="TikTok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <p class="text-[10px] mt-1.5 text-coyote-beige font-medium">TikTok</p>
+                        <p class="text-[11px] mt-2 text-white/90 font-medium">Cursos</p>
                     </div>
                 </div>
 
-                <!-- Fila 3: Guardar Contacto y Compartir QR -->
+                <!-- Fila 3 -->
                 <div class="flex justify-center gap-6 items-start">
                     <div class="text-center w-20 group">
-                        <a id="save-contact-btn" href="#" onclick="rastrearEvento('Descarga_vCard')" download="CoyoteExpress.vcf" class="bg-[#1e1e1e] hover:bg-coyote-gray/40 text-coyote-beige border border-coyote-gray/30 w-12 h-12 rounded-full flex items-center justify-center text-lg transition-all duration-300 group-hover:scale-110 shadow-md mx-auto" aria-label="Guardar Contacto">
+                        <a id="save-contact-btn" href="#" onclick="rastrearEvento('Descarga_vCard')" download="FocacciaExpress.vcf" class="bg-stone-800/80 hover:bg-stone-700 text-white/90 border border-white/10 hover:border-white/30 w-12 h-12 rounded-full flex items-center justify-center text-lg transition-all duration-300 group-hover:scale-110 shadow-md mx-auto backdrop-blur-sm" aria-label="Guardar Contacto">
                             <i class="fas fa-address-book"></i>
                         </a>
-                        <p class="text-[10px] mt-1.5 text-coyote-gray">Guardar</p>
+                        <p class="text-[10px] mt-2 text-white/70">Guardar</p>
                     </div>
                     <div class="text-center w-20 group">
-                        <button type="button" id="share-btn" class="bg-[#1e1e1e] hover:bg-coyote-gray/40 text-coyote-beige border border-coyote-gray/30 w-12 h-12 rounded-full flex items-center justify-center text-lg transition-all duration-300 group-hover:scale-110 shadow-md mx-auto cursor-pointer" aria-label="Compartir / QR">
+                        <button type="button" id="share-btn" onclick="rastrearEvento('Clic_Compartir')" class="bg-stone-800/80 hover:bg-stone-700 text-white/90 border border-white/10 hover:border-white/30 w-12 h-12 rounded-full flex items-center justify-center text-lg transition-all duration-300 group-hover:scale-110 shadow-md mx-auto backdrop-blur-sm" aria-label="Compartir / QR">
                             <i class="fas fa-share-nodes"></i>
                         </button>
-                        <p class="text-[10px] mt-1.5 text-coyote-gray">Compartir</p>
+                        <p class="text-[10px] mt-2 text-white/70">Compartir</p>
                     </div>
                 </div>
             </div>
 
             <!-- Instalación PWA link -->
-            <button type="button" id="install-btn" class="cursor-pointer text-xs text-coyote-yellow hover:text-amber-300 hover:underline font-semibold inline-flex justify-center items-center gap-1.5">
+            <a href="#" id="install-btn" onclick="rastrearEvento('Clic_Instalar_PWA')" class="cursor-pointer text-xs text-amber-400 hover:text-amber-300 hover:underline font-semibold flex justify-center items-center gap-1">
                 <i class="fas fa-download"></i> ¿Cómo instalar nuestra app?
-            </button>
+            </a>
 
             <!-- Footer Conecta+ -->
-            <div class="mt-7 pt-4 border-t border-coyote-gray/20 flex flex-col items-center">
-                <div class="mb-4 flex items-center gap-2 bg-[#1a1a1a] px-3 py-1.5 rounded-full border border-coyote-gray/30 shadow-inner" title="Visitas a la tarjeta">
-                    <i class="fas fa-eye text-coyote-yellow text-xs"></i>
-                    <span class="text-xs text-coyote-beige font-semibold">Visitas:</span>
-                    <img src="https://hits.sh/soyconectaplus.com/coyoteexpress.svg?style=flat-square&label=&color=F5B800&labelColor=121212" alt="Contador de Visitas" class="h-4 rounded-sm">
+            <div class="mt-8 pt-4 border-t border-white/10 flex flex-col items-center">
+                <div class="mb-4 flex items-center gap-2 bg-stone-900/80 px-3 py-1.5 rounded-full border border-stone-800 shadow-inner" title="Visitas a la tarjeta">
+                    <i class="fas fa-eye text-amber-500 text-xs"></i>
+                    <span class="text-xs text-stone-300 font-semibold">Visitas:</span>
+                    <img src="https://hits.sh/soyconectaplus.com/focacciaexpress.svg?style=flat-square&label=&color=f59e0b&labelColor=1c1917" alt="Contador de Visitas" class="h-4 rounded-sm">
                 </div>
 
-                <p class="text-[10px] text-coyote-gray mb-2">Este sitio fue creado por <span class="text-coyote-beige font-bold tracking-wide">Conecta+</span></p>
-                <a href="https://wa.me/573125749480?text=¡Hola!%20Me%20encantó%20la%20tarjeta%20digital%20de%20Coyote%20Express%20y%20quiero%20crear%20una%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#1e1e1e] text-coyote-beige text-[10px] font-semibold py-1.5 px-4 rounded-full border border-coyote-gray/30 hover:bg-coyote-gray/30 hover:text-white transition-all shadow-sm">
-                    <i class="fab fa-whatsapp text-emerald-400 mr-1.5 text-sm"></i> ¡Quiero el mío!
+                <p class="text-[10px] text-white/60 mb-2">Este sitio fue creado por <span class="text-white font-bold tracking-wide">Conecta+</span></p>
+                <a href="https://wa.me/573125749480?text=¡Hola!%20Me%20encantó%20la%20tarjeta%20digital%20de%20Focaccia%20Express%20y%20quiero%20crear%20una%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="inline-block items-center justify-center bg-stone-800/90 text-white/90 text-[10px] font-semibold py-1.5 px-4 rounded-full border border-white/10 hover:bg-stone-700 hover:text-white transition-all shadow-sm backdrop-blur-sm">
+                    <i class="fab fa-whatsapp text-green-400 mr-1.5 text-sm"></i> ¡Quiero el mío!
                 </a>
             </div>
         </div>
 
         <!-- Botón Flotante Carrito -->
-        <button type="button" id="floating-cart-btn" class="fixed md:absolute bottom-5 right-5 bg-gradient-to-tr from-coyote-orange to-coyote-yellow text-coyote-black w-14 h-14 rounded-full shadow-[0_0_25px_rgba(242,68,5,0.6)] flex items-center justify-center text-2xl z-40 hover:scale-110 transition-transform border-2 border-coyote-black cursor-pointer">
-            <i class="fas fa-shopping-bag"></i>
-            <span class="cart-badge absolute -top-1 -right-1 bg-coyote-black text-coyote-yellow text-[11px] font-extrabold w-6 h-6 rounded-full flex items-center justify-center border-2 border-coyote-yellow hidden">0</span>
+        <button type="button" id="floating-cart-btn" onclick="rastrearEvento('Abrir_Carrito_Flotante')" class="fixed md:absolute bottom-6 right-6 bg-amber-500 text-stone-950 w-14 h-14 rounded-full shadow-[0_0_20px_rgba(245,158,11,0.5)] flex items-center justify-center text-2xl z-40 hover:scale-110 transition-transform">
+            <i class="fas fa-shopping-basket"></i>
+            <span class="cart-badge absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-stone-900 hidden">0</span>
         </button>
 
         <!-- Notificación (Toast) -->
-        <div id="toast" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-coyote-yellow text-coyote-black px-5 py-2.5 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.6)] z-50 text-xs font-bold transition-all duration-300 opacity-0 pointer-events-none translate-y-[-20px] flex items-center gap-2 border border-coyote-black">
-            <i class="fas fa-check-circle text-coyote-orange text-base"></i> <span id="toast-msg">Agregado al pedido</span>
+        <div id="toast" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-white px-5 py-2.5 rounded-full shadow-lg z-50 text-sm font-semibold transition-all duration-300 opacity-0 pointer-events-none translate-y-[-20px] flex items-center gap-2">
+            <i class="fas fa-check-circle"></i> <span id="toast-msg">Agregado al carrito</span>
         </div>
     </div>
 
-    <!-- POPUP 1: PRODUCTOS ESTRELLA -->
-    <div id="estrella-popup" class="fixed inset-0 bg-gradient-to-b from-coyote-dark to-coyote-black z-50 hidden p-4 text-white">
+    <!-- Popup: Compartir -->
+    <div id="share-popup" class="fixed inset-0 bg-stone-950 bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50 hidden p-4 transition-opacity">
+        <div class="bg-stone-900 border border-stone-800 rounded-3xl shadow-2xl p-8 max-w-xs w-full text-center relative text-stone-100">
+            <button type="button" id="close-share-popup-btn" class="absolute top-3 right-4 text-2xl text-stone-400 hover:text-white transition-colors">&times;</button>
+            <h3 class="text-xl font-bold mb-2 font-logo text-amber-400">Invita a tus amigos</h3>
+            <p class="text-xs text-stone-400 mb-5">Escanea el código para compartir Focaccia Express</p>
+            
+            <div id="qrcode-container" class="flex justify-center mb-5 bg-white p-3 rounded-2xl mx-auto w-max shadow-inner"></div>
+            
+            <input type="text" id="share-url" class="w-full bg-stone-950 text-stone-300 text-center rounded-xl p-3 border border-stone-800 text-xs focus:outline-none focus:border-amber-500 transition-colors" readonly>
+            <p class="text-[10px] text-stone-500 mt-2">Toca el enlace para copiar</p>
+        </div>
+    </div>
+
+    <!-- Popup: Congelados -->
+    <div id="congelados-popup" class="fixed inset-0 bg-gradient-to-b from-stone-950 to-stone-900 z-50 hidden p-4 text-stone-100">
         <div class="w-full h-full max-w-lg mx-auto relative flex flex-col">
-            <div class="flex justify-between items-center py-4 px-2 border-b border-coyote-orange/40 shrink-0">
-                <div class="flex items-center gap-2.5">
-                    <span class="bg-coyote-orange text-white w-8 h-8 rounded-xl flex items-center justify-center shadow">
-                        <i class="fas fa-star"></i>
-                    </span>
-                    <div>
-                        <h2 class="font-brand text-2xl text-coyote-yellow tracking-wide uppercase leading-none">Productos Estrella</h2>
-                        <span class="text-[10px] text-coyote-beige uppercase tracking-widest">Los favoritos de la casa</span>
+            <div class="flex justify-between items-center py-4 px-2 border-b border-stone-800 shrink-0">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-snowflake text-amber-400 text-xl"></i>
+                    <h2 class="font-logo text-2xl text-stone-100 tracking-wide">CONGELADOS</h2>
+                </div>
+                <button type="button" id="close-congelados-popup-btn" class="text-2xl text-stone-400 hover:text-amber-400 transition-colors z-10 w-10 h-10 flex items-center justify-center rounded-full bg-stone-800">&times;</button>
+            </div>
+            <div class="overflow-y-auto menu-scrollbar flex-grow py-6 pr-2">
+                <p class="text-sm text-stone-400 mb-6 px-2">Lleva el sabor a tu casa con nuestros productos listos para hornear o freír.</p>
+                
+                <div class="space-y-3 px-2">
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/YCXqVp9Z/Whats-App-Image-2026-11-12-at-7-40-07-PM.jpg" alt="Palitos de Queso" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Palitos de Queso</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Listos para freír u hornear.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$12.000 <span class="text-[9px] font-normal text-stone-500">(6 und)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Palitos de Queso')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Palitos de Queso">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/R0Ff9n6V/IMG-20261118-WA0086.jpg" alt="Masa para Pandebonos" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Masa para Pandebonos</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Sabor tradicional en casa.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$14.000 <span class="text-[9px] font-normal text-stone-500">(500 gr)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Masa para Pandebonos')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Masa para Pandebonos">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/R0Ff9n6V/IMG-20261118-WA0086.jpg" alt="Masa para Pandequesos" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Masa para Pandequesos</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Esponjosos y llenos de queso.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$14.000 <span class="text-[9px] font-normal text-stone-500">(500 gr)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Masa para Pandequesos')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Masa para Pandequesos">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/pTJs7FgH/IMG-20261118-WA0088.jpg" alt="Masa para Buñuelos" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Masa para Buñuelos</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Esponjosos, doraditos y con el sabor tradicional.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$14.000 <span class="text-[9px] font-normal text-stone-500">(500 gr)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Masa para Buñuelos')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Masa para Buñuelos">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/BQLxPFML/IMG-20261118-WA0087.jpg" alt="Masa para Waffles" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Masa para Waffles</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Desayunos perfectos al instante.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$14.000 <span class="text-[9px] font-normal text-stone-500">(500 gr)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Masa para Waffles')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Masa para Waffles">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/nrnypDSL/Whats-App-Image-2026-11-12-at-8-07-32-PM-(1).jpg" alt="Base para Pizzas" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Base para Pizzas</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Lista para hornear con tus ingredientes favoritos.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$6.000 <span class="text-[9px] font-normal text-stone-500">(6 und)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Base para Pizzas')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Base para Pizzas">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                 </div>
-                <button type="button" onclick="closePopup('estrella-popup')" class="text-2xl text-coyote-beige hover:text-coyote-yellow transition-colors w-10 h-10 flex items-center justify-center rounded-full bg-[#1f1f1f] cursor-pointer">&times;</button>
-            </div>
-            <div class="overflow-y-auto menu-scrollbar flex-grow py-5 pr-1">
-                <div id="estrella-list" class="space-y-3 px-1"></div>
-                <div class="mt-8 mb-6 px-1">
-                    <button type="button" onclick="closePopup('estrella-popup'); openCartModal();" class="block w-full bg-gradient-to-r from-coyote-yellow to-coyote-orange text-coyote-black font-bold py-4 px-6 rounded-2xl text-lg transition-all hover:brightness-110 shadow-lg uppercase font-brand tracking-wider cursor-pointer">
-                        <i class="fas fa-shopping-bag mr-2"></i> Ver mi Pedido
+                
+                <div class="mt-10 mb-8 text-center px-2">
+                    <button type="button" onclick="closePopup('congelados-popup'); document.getElementById('floating-cart-btn').click();" class="block w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-300 hover:brightness-110 shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+                        <i class="fas fa-shopping-basket mr-2"></i> Ver mi Pedido
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- POPUP 2: SALCHIPAPAS & PATACÓN -->
-    <div id="salchipapas-popup" class="fixed inset-0 bg-gradient-to-b from-coyote-dark to-coyote-black z-50 hidden p-4 text-white">
+    <!-- Popup: Panes -->
+    <div id="panes-popup" class="fixed inset-0 bg-gradient-to-b from-stone-950 to-stone-900 z-50 hidden p-4 text-stone-100">
         <div class="w-full h-full max-w-lg mx-auto relative flex flex-col">
-            <div class="flex justify-between items-center py-4 px-2 border-b border-coyote-gray/30 shrink-0">
-                <div class="flex items-center gap-2.5">
-                    <i class="fas fa-utensils text-coyote-yellow text-xl"></i>
-                    <h2 class="font-brand text-2xl text-white tracking-wide uppercase">Salchipapas & Patacón</h2>
+            <div class="flex justify-between items-center py-4 px-2 border-b border-stone-800 shrink-0">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-hamburger text-amber-400 text-xl"></i>
+                    <h2 class="font-logo text-2xl text-stone-100 tracking-wide">PANES</h2>
                 </div>
-                <button type="button" onclick="closePopup('salchipapas-popup')" class="text-2xl text-coyote-beige hover:text-coyote-yellow transition-colors w-10 h-10 flex items-center justify-center rounded-full bg-[#1f1f1f] cursor-pointer">&times;</button>
+                <button type="button" id="close-panes-popup-btn" class="text-2xl text-stone-400 hover:text-amber-400 transition-colors z-10 w-10 h-10 flex items-center justify-center rounded-full bg-stone-800">&times;</button>
             </div>
-            <div class="overflow-y-auto menu-scrollbar flex-grow py-5 pr-1">
-                <div id="salchipapas-list" class="space-y-3 px-1"></div>
-                <div class="mt-8 mb-6 px-1">
-                    <button type="button" onclick="closePopup('salchipapas-popup'); openCartModal();" class="block w-full bg-gradient-to-r from-coyote-yellow to-coyote-orange text-coyote-black font-bold py-4 px-6 rounded-2xl text-lg transition-all hover:brightness-110 shadow-lg uppercase font-brand tracking-wider cursor-pointer">
-                        <i class="fas fa-shopping-bag mr-2"></i> Ver mi Pedido
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- POPUP 3: HAMBURGUESAS, PERROS & APLASTADOS -->
-    <div id="burgers-popup" class="fixed inset-0 bg-gradient-to-b from-coyote-dark to-coyote-black z-50 hidden p-4 text-white">
-        <div class="w-full h-full max-w-lg mx-auto relative flex flex-col">
-            <div class="flex justify-between items-center py-4 px-2 border-b border-coyote-gray/30 shrink-0">
-                <div class="flex items-center gap-2.5">
-                    <i class="fas fa-burger text-coyote-yellow text-xl"></i>
-                    <h2 class="font-brand text-2xl text-white tracking-wide uppercase">Burgers, Perros & Más</h2>
-                </div>
-                <button type="button" onclick="closePopup('burgers-popup')" class="text-2xl text-coyote-beige hover:text-coyote-yellow transition-colors w-10 h-10 flex items-center justify-center rounded-full bg-[#1f1f1f] cursor-pointer">&times;</button>
-            </div>
-            <div class="overflow-y-auto menu-scrollbar flex-grow py-5 pr-1">
-                <div id="burgers-list" class="space-y-3 px-1"></div>
-                <div class="mt-8 mb-6 px-1">
-                    <button type="button" onclick="closePopup('burgers-popup'); openCartModal();" class="block w-full bg-gradient-to-r from-coyote-yellow to-coyote-orange text-coyote-black font-bold py-4 px-6 rounded-2xl text-lg transition-all hover:brightness-110 shadow-lg uppercase font-brand tracking-wider cursor-pointer">
-                        <i class="fas fa-shopping-bag mr-2"></i> Ver mi Pedido
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- POPUP 4: ASADOS & PICADAS -->
-    <div id="asados-popup" class="fixed inset-0 bg-gradient-to-b from-coyote-dark to-coyote-black z-50 hidden p-4 text-white">
-        <div class="w-full h-full max-w-lg mx-auto relative flex flex-col">
-            <div class="flex justify-between items-center py-4 px-2 border-b border-coyote-orange/40 shrink-0">
-                <div class="flex items-center gap-2.5">
-                    <i class="fas fa-fire-burner text-coyote-orange text-xl"></i>
-                    <h2 class="font-brand text-2xl text-white tracking-wide uppercase">Asados & Picadas</h2>
-                </div>
-                <button type="button" onclick="closePopup('asados-popup')" class="text-2xl text-coyote-beige hover:text-coyote-yellow transition-colors w-10 h-10 flex items-center justify-center rounded-full bg-[#1f1f1f] cursor-pointer">&times;</button>
-            </div>
-            <div class="overflow-y-auto menu-scrollbar flex-grow py-5 pr-1">
-                <div id="asados-list" class="space-y-3 px-1"></div>
-                <div class="mt-8 mb-6 px-1">
-                    <button type="button" onclick="closePopup('asados-popup'); openCartModal();" class="block w-full bg-gradient-to-r from-coyote-yellow to-coyote-orange text-coyote-black font-bold py-4 px-6 rounded-2xl text-lg transition-all hover:brightness-110 shadow-lg uppercase font-brand tracking-wider cursor-pointer">
-                        <i class="fas fa-shopping-bag mr-2"></i> Ver mi Pedido
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- POPUP 5: BEBIDAS, SODAS & ADICIONES -->
-    <div id="bebidas-popup" class="fixed inset-0 bg-gradient-to-b from-coyote-dark to-coyote-black z-50 hidden p-4 text-white">
-        <div class="w-full h-full max-w-lg mx-auto relative flex flex-col">
-            <div class="flex justify-between items-center py-4 px-2 border-b border-coyote-gray/30 shrink-0">
-                <div class="flex items-center gap-2.5">
-                    <i class="fas fa-bottle-droplet text-coyote-yellow text-xl"></i>
-                    <h2 class="font-brand text-2xl text-white tracking-wide uppercase">Bebidas & Adiciones</h2>
-                </div>
-                <button type="button" onclick="closePopup('bebidas-popup')" class="text-2xl text-coyote-beige hover:text-coyote-yellow transition-colors w-10 h-10 flex items-center justify-center rounded-full bg-[#1f1f1f] cursor-pointer">&times;</button>
-            </div>
-            <div class="overflow-y-auto menu-scrollbar flex-grow py-5 pr-1">
-                <div id="bebidas-list" class="space-y-3 px-1"></div>
-                <div class="mt-8 mb-6 px-1">
-                    <button type="button" onclick="closePopup('bebidas-popup'); openCartModal();" class="block w-full bg-gradient-to-r from-coyote-yellow to-coyote-orange text-coyote-black font-bold py-4 px-6 rounded-2xl text-lg transition-all hover:brightness-110 shadow-lg uppercase font-brand tracking-wider cursor-pointer">
-                        <i class="fas fa-shopping-bag mr-2"></i> Ver mi Pedido
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- POPUP 6: UBICACIÓN Y HORARIOS -->
-    <div id="location-popup" class="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 hidden p-4">
-        <div class="bg-[#181818] border border-coyote-yellow/40 rounded-3xl shadow-2xl p-6 max-w-xs w-full text-center relative text-white">
-            <button type="button" onclick="closePopup('location-popup')" class="absolute top-3 right-4 text-2xl text-coyote-gray hover:text-white cursor-pointer">&times;</button>
-            <div class="w-14 h-14 bg-gradient-to-tr from-coyote-orange to-coyote-yellow rounded-2xl flex items-center justify-center text-coyote-black mx-auto mb-3 shadow-lg">
-                <i class="fas fa-location-dot text-2xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold font-brand text-coyote-yellow uppercase tracking-wide">Ubicación & Horario</h3>
-            <p class="text-xs text-coyote-beige mt-1 mb-4">¡Ven a disfrutar el mejor sabor al carbón y comidas rápidas!</p>
-            
-            <div class="bg-coyote-black p-4 rounded-2xl border border-coyote-gray/30 text-left space-y-2.5 mb-5">
-                <div class="flex items-start gap-2.5">
-                    <i class="fas fa-clock text-coyote-yellow mt-0.5 text-sm"></i>
-                    <div>
-                        <p class="text-xs font-bold text-white">Horario de Atención</p>
-                        <p class="text-[11px] text-coyote-beige">Lunes a Domingo: 5:00 PM - 11:30 PM</p>
+            <div class="overflow-y-auto menu-scrollbar flex-grow py-6 pr-2">
+                <p class="text-sm text-stone-400 mb-4 px-2">Panes artesanales horneados con el mejor sabor.</p>
+                
+                <div class="mb-5 bg-stone-950/50 p-3 rounded-2xl border border-stone-800/50 mx-2">
+                    <p class="text-[10px] text-amber-400 mb-2 uppercase tracking-wider font-semibold"><i class="fas fa-star text-[9px] mr-1"></i> Sabores disponibles en todas las presentaciones:</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-stone-800/80 border border-white/10 text-stone-200 text-[11px] px-3 py-1 rounded-full shadow-sm">Papa</span>
+                        <span class="bg-stone-800/80 border border-white/10 text-stone-200 text-[11px] px-3 py-1 rounded-full shadow-sm">Ajo</span>
+                        <span class="bg-stone-800/80 border border-white/10 text-stone-200 text-[11px] px-3 py-1 rounded-full shadow-sm">Cebolla</span>
+                        <span class="bg-stone-800/80 border border-white/10 text-stone-200 text-[11px] px-3 py-1 rounded-full shadow-sm">Pimentón</span>
                     </div>
                 </div>
-                <div class="flex items-start gap-2.5">
-                    <i class="fas fa-motorcycle text-coyote-orange mt-0.5 text-sm"></i>
-                    <div>
-                        <p class="text-xs font-bold text-white">Servicio a Domicilio</p>
-                        <p class="text-[11px] text-coyote-beige">Línea directa: 316 832 4287</p>
+
+                <div class="space-y-3 px-2">
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/2jvRvzN9/Whats-App-Image-2026-11-12-at-7-44-56-PM.jpg" alt="Pan de Hamburguesa" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Pan de Hamburguesa</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Ideal para tus recetas clásicas y gourmet.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$7.500 <span class="text-[9px] font-normal text-stone-500">(paquete de 6 und)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Pan de Hamburguesa')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Pan de Hamburguesa">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/zGQ00gnB/Whats-App-Image-2026-11-12-at-7-47-26-PM.jpg" alt="Pan Perro" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Pan para Perro</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">La textura perfecta que no se rompe.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$7.500 <span class="text-[9px] font-normal text-stone-500">(paquete de 6 und)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Pan para Perro')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Pan para Perro">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/Qx4bdTnD/Whats-App-Image-2026-11-12-at-7-54-33-PM.jpg" alt="Croissant" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Croissant Artesanal</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Hojaldre suave, mantequilludo y aromático.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$7.500 <span class="text-[9px] font-normal text-stone-500">(paquete de 6 und)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Croissant Artesanal')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Croissant">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/0j9fbdsP/Whats-App-Image-2026-11-12-at-7-51-16-PM.jpg" alt="Pan Sánduche" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Pan Sánduche</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Tajado, suave y perfecto para el día a día.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$7.500 <span class="text-[9px] font-normal text-stone-500">(paquete de 6 und)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Pan Sánduche')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Pan Sánduche">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                 </div>
-            </div>
 
-            <div class="space-y-2.5">
-                <a href="https://www.google.com/maps/search/?api=1&query=Coyote+Express" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-coyote-yellow to-coyote-orange text-coyote-black font-bold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-md">
-                    <i class="fas fa-map-location-dot"></i> Abrir en Google Maps
-                </a>
-                <a href="https://wa.me/573168324287?text=¡Hola%20Coyote%20Express!%20¿Me%20pueden%20enviar%20su%20ubicación%20exacta%20por%20favor?" target="_blank" rel="noopener noreferrer" class="w-full bg-[#242424] hover:bg-[#2e2e2e] text-coyote-beige font-semibold py-2.5 px-4 rounded-xl text-xs flex items-center justify-center gap-2 border border-coyote-gray/30 transition-all">
-                    <i class="fab fa-whatsapp text-emerald-400 text-sm"></i> Pedir pin por WhatsApp
-                </a>
+                <div class="mt-10 mb-8 text-center px-2">
+                    <button type="button" onclick="closePopup('panes-popup'); document.getElementById('floating-cart-btn').click();" class="block w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-300 hover:brightness-110 shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+                        <i class="fas fa-shopping-basket mr-2"></i> Ver mi Pedido
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- POPUP 7: COMPARTIR QR -->
-    <div id="share-popup" class="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 hidden p-4">
-        <div class="bg-[#181818] border border-coyote-yellow/40 rounded-3xl shadow-2xl p-7 max-w-xs w-full text-center relative text-white">
-            <button type="button" id="close-share-popup-btn" class="absolute top-3 right-4 text-2xl text-coyote-gray hover:text-white transition-colors cursor-pointer">&times;</button>
-            <h3 class="text-2xl font-bold mb-1 font-brand text-coyote-yellow uppercase">Comparte el Sabor</h3>
-            <p class="text-xs text-coyote-beige mb-5">Escanea el QR para abrir la carta de Coyote Express</p>
-            
-            <div id="qrcode-container" class="flex justify-center mb-5 bg-white p-3 rounded-2xl mx-auto w-max shadow-inner border-2 border-coyote-yellow"></div>
-            
-            <input type="text" id="share-url" class="w-full bg-coyote-black text-coyote-beige text-center rounded-xl p-3 border border-coyote-gray/40 text-xs focus:outline-none focus:border-coyote-yellow transition-colors cursor-pointer" readonly>
-            <p class="text-[10px] text-coyote-gray mt-2">Toca el enlace para copiarlo</p>
+    <!-- Popup: Tortas -->
+    <div id="tortas-popup" class="fixed inset-0 bg-gradient-to-b from-stone-950 to-stone-900 z-50 hidden p-4 text-stone-100">
+        <div class="w-full h-full max-w-lg mx-auto relative flex flex-col">
+            <div class="flex justify-between items-center py-4 px-2 border-b border-stone-800 shrink-0">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-cake-candles text-amber-400 text-xl"></i>
+                    <h2 class="font-logo text-2xl text-stone-100 tracking-wide">TORTAS</h2>
+                </div>
+                <button type="button" id="close-tortas-popup-btn" class="text-2xl text-stone-400 hover:text-amber-400 transition-colors z-10 w-10 h-10 flex items-center justify-center rounded-full bg-stone-800">&times;</button>
+            </div>
+            <div class="overflow-y-auto menu-scrollbar flex-grow py-6 pr-2">
+                <p class="text-sm text-stone-400 mb-6 px-2">El dulce sabor para compartir tus mejores momentos.</p>
+                
+                <div class="space-y-3 px-2">
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/VLy19Qm3/IMG-20261118-WA0059.jpg" alt="Torta de Zanahoria" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Torta de Zanahoria</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Suave, esponjosa y con el toque perfecto de especias.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$32.000 <span class="text-[9px] font-normal text-stone-500">(8 porciones)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Torta de Zanahoria')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Torta de Zanahoria">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/TPhNK1Lk/IMG-20261118-WA0061.jpg" alt="Torta Caramelo-Vainilla" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Torta Caramelo-Vainilla</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Dulce combinación clásica que encanta a todos.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$32.000 <span class="text-[9px] font-normal text-stone-500">(8 porciones)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Torta Caramelo-Vainilla')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Torta Caramelo-Vainilla">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/3RL9ZHsV/IMG-20261118-WA0054.jpg" alt="Torta Red Velvet" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Torta Red Velvet</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Elegancia y sabor inconfundible con frosting especial.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$32.000 <span class="text-[9px] font-normal text-stone-500">(8 porciones)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Torta Red Velvet')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Torta Red Velvet">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-stone-900/90 rounded-2xl border border-stone-800 shadow-md p-2 flex items-center gap-3 transition-all hover:bg-stone-800">
+                        <img src="https://i.postimg.cc/fTgP7YcV/IMG-20261118-WA0060.jpg" alt="Torta de Chocolate" class="w-16 h-16 object-cover rounded-xl shadow-sm shrink-0 border border-white/5">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-stone-200 font-logo leading-tight">Torta de Chocolate</h4>
+                            <p class="text-[10px] text-stone-400 mt-1 leading-snug">Para los verdaderos amantes del cacao intenso.</p>
+                            <p class="text-amber-400 font-bold text-xs mt-1">$32.000 <span class="text-[9px] font-normal text-stone-500">(8 porciones)</span></p>
+                        </div>
+                        <button type="button" onclick="addToCart('Torta de Chocolate')" class="bg-amber-500 hover:bg-amber-400 text-stone-950 w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0 transition-transform hover:scale-110 shadow-md mr-1" aria-label="Agregar Torta de Chocolate">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-10 mb-8 text-center px-2">
+                    <button type="button" onclick="closePopup('tortas-popup'); document.getElementById('floating-cart-btn').click();" class="block w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-300 hover:brightness-110 shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+                        <i class="fas fa-shopping-basket mr-2"></i> Ver mi Pedido
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- POPUP 8: INSTALACIÓN PWA -->
-    <div id="install-popup" class="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 hidden p-4">
-        <div class="bg-[#181818] border border-coyote-yellow/40 rounded-3xl shadow-2xl p-6 max-w-sm w-full relative text-white">
-            <button type="button" id="close-install-popup-btn" class="absolute top-3 right-4 text-2xl text-coyote-gray hover:text-white transition-colors cursor-pointer">&times;</button>
+    <!-- Popup: Instalación PWA -->
+    <div id="install-popup" class="fixed inset-0 bg-stone-950 bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50 hidden p-4 transition-opacity">
+        <div class="bg-stone-900 border border-stone-800 rounded-3xl shadow-2xl p-6 max-w-sm w-full relative text-stone-100">
+            <button type="button" id="close-install-popup-btn" class="absolute top-3 right-4 text-2xl text-stone-400 hover:text-white transition-colors">&times;</button>
             
             <div class="text-center mb-5">
-                <div class="w-12 h-12 bg-gradient-to-tr from-coyote-orange to-coyote-yellow rounded-2xl flex items-center justify-center text-coyote-black mx-auto mb-3 shadow-md">
-                    <i class="fas fa-mobile-screen-button text-xl"></i>
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-stone-950 mx-auto mb-3 shadow-md">
+                    <i class="fas fa-mobile-alt text-xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold font-brand text-coyote-yellow uppercase tracking-wide">Instalar Coyote Express</h3>
-                <p class="text-xs text-coyote-beige mt-1">Guarda nuestra app en tu celular para pedir más rápido</p>
+                <h3 class="text-xl font-bold font-logo text-amber-400 tracking-wide">Instalar Focaccia</h3>
+                <p class="text-xs text-stone-400 mt-1">Lleva nuestra panadería siempre en tu celular</p>
             </div>
             
-            <div class="mb-4 bg-coyote-black p-4 rounded-2xl border border-coyote-gray/30 text-left">
-                <h4 class="font-bold text-sm mb-2 flex items-center text-white"><i class="fab fa-apple mr-2 text-coyote-beige"></i> En iPhone / iOS (Safari)</h4>
-                <ol class="list-decimal list-inside text-xs text-coyote-beige space-y-1.5">
-                    <li>Toca el botón <strong>Compartir</strong> <i class="fas fa-share-from-square mx-1 text-coyote-yellow"></i>.</li>
-                    <li>Desliza y elige <strong class="text-white">"Agregar a inicio"</strong>.</li>
-                    <li>Toca en <strong class="text-coyote-yellow">"Agregar"</strong> arriba a la derecha.</li>
+            <div class="mb-4 bg-stone-950 p-4 rounded-2xl border border-stone-800">
+                <h4 class="font-bold text-sm mb-2 flex items-center text-stone-200"><i class="fab fa-apple mr-2 text-stone-400"></i> En iOS (Safari)</h4>
+                <ol class="list-decimal list-inside text-xs text-stone-400 space-y-2">
+                    <li>Toca el botón <strong>Compartir</strong> <i class="fas fa-share-from-square mx-1"></i>.</li>
+                    <li>Desliza hacia arriba y elige <strong class="text-stone-200">"Agregar a inicio"</strong>.</li>
+                    <li>Toca en <strong class="text-stone-200">"Agregar"</strong> arriba a la derecha.</li>
                 </ol>
             </div>
             
-            <div class="bg-coyote-black p-4 rounded-2xl border border-coyote-gray/30 text-left">
-                <h4 class="font-bold text-sm mb-2 flex items-center text-white"><i class="fab fa-android mr-2 text-emerald-400"></i> En Android (Chrome)</h4>
-                <ol class="list-decimal list-inside text-xs text-coyote-beige space-y-1.5">
-                    <li>Toca los <strong>tres puntos</strong> <i class="fas fa-ellipsis-vertical mx-1 text-coyote-yellow"></i> arriba a la derecha.</li>
-                    <li>Elige <strong class="text-white">"Agregar a la pantalla principal"</strong>.</li>
-                    <li>Confirma tocando <strong class="text-coyote-yellow">"Instalar"</strong>.</li>
+            <div class="bg-stone-950 p-4 rounded-2xl border border-stone-800">
+                <h4 class="font-bold text-sm mb-2 flex items-center text-stone-200"><i class="fab fa-android mr-2 text-green-400"></i> En Android (Chrome)</h4>
+                <ol class="list-decimal list-inside text-xs text-stone-400 space-y-2">
+                    <li>Toca los <strong>tres puntos</strong> <i class="fas fa-ellipsis-v mx-1"></i> arriba a la derecha.</li>
+                    <li>Elige <strong class="text-stone-200">"Agregar a la pantalla principal"</strong>.</li>
+                    <li>Confirma tocando <strong class="text-stone-200">"Instalar"</strong>.</li>
                 </ol>
             </div>
         </div>
     </div>
 
-    <!-- POPUP 9: CARRITO DE PEDIDOS -->
-    <div id="cart-popup" class="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center z-50 hidden p-4">
-        <div class="bg-[#181818] border border-coyote-yellow/40 rounded-3xl shadow-2xl p-5 max-w-sm w-full relative text-white flex flex-col max-h-[90vh]">
-            <div class="flex justify-between items-center mb-3 border-b border-coyote-gray/30 pb-3 shrink-0">
-                <h3 class="text-2xl font-bold font-brand text-coyote-yellow flex items-center gap-2 uppercase">
-                    <i class="fas fa-shopping-bag text-coyote-orange"></i> Tu Pedido
-                </h3>
-                <button type="button" id="close-cart-popup-btn" class="text-2xl text-coyote-gray hover:text-white w-8 h-8 flex justify-center items-center rounded-full bg-coyote-black cursor-pointer">&times;</button>
-            </div>
+    <!-- Popup: Cursos -->
+    <div id="cursos-popup" class="fixed inset-0 bg-stone-950 bg-opacity-90 backdrop-blur-md flex items-center justify-center z-50 hidden p-4 transition-opacity">
+        <div class="bg-stone-900 border-2 border-amber-500/50 rounded-3xl shadow-[0_0_40px_rgba(245,158,11,0.25)] p-1 max-w-sm w-full relative text-white overflow-hidden">
             
-            <div class="overflow-y-auto menu-scrollbar flex-grow pr-1 mb-3 space-y-4">
-                <div id="cart-items" class="space-y-2.5"></div>
-
-                <div id="delivery-form" class="bg-coyote-black/80 rounded-2xl p-3.5 border border-coyote-gray/30 space-y-3 text-left hidden">
-                    <p class="text-[11px] font-bold uppercase tracking-wider text-coyote-yellow flex items-center gap-1.5">
-                        <i class="fas fa-clipboard-list text-coyote-orange"></i> Datos de Entrega
-                    </p>
-
-                    <div>
-                        <label class="text-[10px] text-coyote-beige block mb-1">¿Cómo deseas recibir tu pedido?</label>
-                        <div class="grid grid-cols-2 gap-2">
-                            <button type="button" id="btn-mode-domicilio" onclick="setDeliveryMode('Domicilio')" class="py-2 px-2.5 rounded-xl text-xs font-bold border border-coyote-yellow bg-coyote-yellow text-coyote-black flex items-center justify-center gap-1.5 transition-all cursor-pointer">
-                                <i class="fas fa-motorcycle"></i> Domicilio
-                            </button>
-                            <button type="button" id="btn-mode-recoger" onclick="setDeliveryMode('Recoger en Local')" class="py-2 px-2.5 rounded-xl text-xs font-bold border border-coyote-gray/40 bg-[#1e1e1e] text-coyote-beige flex items-center justify-center gap-1.5 transition-all cursor-pointer">
-                                <i class="fas fa-store"></i> Recoger
-                            </button>
-                        </div>
-                    </div>
-
-                    <div id="address-field-container">
-                        <label for="order-address" class="text-[10px] text-coyote-beige block mb-1">Dirección / Barrio</label>
-                        <input type="text" id="order-address" oninput="updateWhatsAppLink()" placeholder="Ej: Calle 10 # 15-20, Barrio Centro" class="w-full bg-[#1e1e1e] text-white text-xs rounded-xl px-3 py-2 border border-coyote-gray/40 focus:outline-none focus:border-coyote-yellow placeholder-coyote-gray/70">
-                    </div>
-
-                    <div>
-                        <label for="order-payment" class="text-[10px] text-coyote-beige block mb-1">Método de Pago</label>
-                        <select id="order-payment" onchange="updateWhatsAppLink()" class="w-full bg-[#1e1e1e] text-white text-xs rounded-xl px-3 py-2 border border-coyote-gray/40 focus:outline-none focus:border-coyote-yellow">
-                            <option value="Efectivo">💵 Efectivo</option>
-                            <option value="Nequi">📱 Nequi</option>
-                            <option value="Bancolombia">🏦 Transferencia Bancolombia</option>
-                            <option value="Datáfono">💳 Datáfono</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="order-notes" class="text-[10px] text-coyote-beige block mb-1">Notas o indicaciones (opcional)</label>
-                        <input type="text" id="order-notes" oninput="updateWhatsAppLink()" placeholder="Ej: Sin cebolla, pago con billete de $50.000..." class="w-full bg-[#1e1e1e] text-white text-xs rounded-xl px-3 py-2 border border-coyote-gray/40 focus:outline-none focus:border-coyote-yellow placeholder-coyote-gray/70">
-                    </div>
-                </div>
-            </div>
-
-            <div class="shrink-0 pt-3 border-t border-coyote-gray/30">
-                <div id="cart-total-box" class="flex justify-between items-center bg-coyote-black px-4 py-2.5 rounded-xl border border-coyote-gray/30 mb-3 hidden">
-                    <span class="text-xs uppercase tracking-wider text-coyote-beige font-semibold">Total Estimado:</span>
-                    <span id="cart-total-amount" class="text-lg font-extrabold text-coyote-yellow">$0</span>
-                </div>
-
-                <a id="send-order-btn" href="#" onclick="rastrearEvento('Enviar_Pedido_WhatsApp')" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold py-3.5 px-6 rounded-2xl text-base transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.35)] flex items-center justify-center gap-2 opacity-50 pointer-events-none uppercase font-brand tracking-wider">
-                    <i class="fab fa-whatsapp text-xl"></i> Enviar Pedido por WhatsApp
-                </a>
+            <button type="button" id="close-cursos-popup-btn" class="absolute top-3 right-4 text-2xl text-stone-300 drop-shadow-md hover:text-amber-400 z-10 bg-black bg-opacity-40 w-8 h-8 rounded-full flex items-center justify-center transition-colors">&times;</button>
+            
+            <div class="bg-stone-950 rounded-3xl p-5 text-center relative overflow-hidden max-h-[85vh] overflow-y-auto menu-scrollbar">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-amber-500 rounded-full blur-3xl opacity-20"></div>
                 
-                <div class="flex justify-between items-center mt-3 px-1">
-                    <button type="button" onclick="clearCart()" id="clear-cart-btn" class="text-coyote-orange text-[11px] hover:underline hidden cursor-pointer">
-                        <i class="fas fa-trash-can mr-1"></i> Vaciar carrito
-                    </button>
-                    <button type="button" onclick="closePopup('cart-popup')" class="text-coyote-beige text-xs hover:text-white underline ml-auto cursor-pointer">
-                        Seguir viendo carta
-                    </button>
+                <h3 class="text-3xl font-bold mb-1 mt-2 font-logo text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">CURSOS</h3>
+                <p class="text-amber-400 font-bold uppercase tracking-widest text-[10px] mb-4">Aprende el arte de la panadería</p>
+                
+                <div class="space-y-3 mt-6 mb-5 text-left px-1">
+                    <div class="bg-stone-900/90 p-3.5 rounded-2xl border border-stone-800 shadow-md">
+                        <h4 class="font-bold text-amber-400 font-logo mb-1 border-b border-stone-800 pb-1 text-sm"><i class="fas fa-bread-slice mr-1.5"></i> Panadería</h4>
+                        <p class="text-stone-300 text-xs leading-relaxed">Pan de masa madre, panes aromáticos, panes salados, panes dulces, panes rellenos.</p>
+                    </div>
+                    <div class="bg-stone-900/90 p-3.5 rounded-2xl border border-stone-800 shadow-md">
+                        <h4 class="font-bold text-amber-400 font-logo mb-1 border-b border-stone-800 pb-1 text-sm"><i class="fas fa-cookie-bite mr-1.5"></i> Repostería</h4>
+                        <p class="text-stone-300 text-xs leading-relaxed">Coberturas, cremas, postres dulces, jaleas, salsas, chocolates.</p>
+                    </div>
+                    <div class="bg-stone-900/90 p-3.5 rounded-2xl border border-stone-800 shadow-md">
+                        <h4 class="font-bold text-amber-400 font-logo mb-1 border-b border-stone-800 pb-1 text-sm"><i class="fas fa-cake-candles mr-1.5"></i> Pastelería</h4>
+                        <p class="text-stone-300 text-xs leading-relaxed">Pastas hojaldradas, tortas, enrollados.</p>
+                    </div>
                 </div>
+                
+                <a href="https://wa.me/573017824317?text=¡Hola!%20Quiero%20información%20sobre%20los%20cursos%20de%20panadería,%20repostería%20y%20pastelería." onclick="rastrearEvento('Clic_Boton_Cursos')" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-amber-500 to-yellow-500 text-stone-950 font-bold py-3.5 px-8 rounded-2xl text-md transition-all duration-300 hover:brightness-110 w-full mb-2 shadow-md">
+                    <i class="fas fa-user-graduate mr-2"></i> Consultar Cursos
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- POPUP 10: PERSONALIZACIÓN RÁPIDA DE PRODUCTO -->
-    <div id="customize-popup" class="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center z-50 hidden p-4">
-        <div class="bg-[#181818] border border-coyote-yellow/50 rounded-3xl shadow-2xl p-6 max-w-xs w-full relative text-white text-left">
-            <button type="button" onclick="closePopup('customize-popup')" class="absolute top-3 right-4 text-2xl text-coyote-gray hover:text-white cursor-pointer">&times;</button>
-            
-            <div class="flex items-center gap-2 mb-1">
-                <span class="bg-coyote-orange text-white text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase">Personaliza</span>
+    <!-- Popup: Carrito -->
+    <div id="cart-popup" class="fixed inset-0 bg-stone-950 bg-opacity-90 backdrop-blur-md flex items-center justify-center z-50 hidden p-4 transition-opacity">
+        <div class="bg-stone-900 border border-stone-800 rounded-3xl shadow-2xl p-6 max-w-sm w-full relative text-stone-100 flex flex-col max-h-[85vh]">
+            <div class="flex justify-between items-center mb-4 border-b border-stone-800 pb-4 shrink-0">
+                <h3 class="text-xl font-bold font-logo text-amber-400 flex items-center gap-2"><i class="fas fa-shopping-basket"></i> Tu Pedido</h3>
+                <button type="button" id="close-cart-popup-btn" class="text-2xl text-stone-400 hover:text-white transition-colors w-8 h-8 flex justify-center items-center rounded-full bg-stone-800 hover:bg-stone-700">&times;</button>
             </div>
-            <h3 id="cust-product-title" class="text-xl font-bold font-brand text-coyote-yellow uppercase leading-tight">Producto</h3>
-            <p id="cust-question" class="text-xs text-coyote-beige mt-1.5 mb-4">Elige una opción para tu plato:</p>
             
-            <div id="cust-options-container" class="space-y-2 mb-5"></div>
+            <div id="cart-items" class="overflow-y-auto menu-scrollbar flex-grow space-y-3 pr-2 mb-4"></div>
 
-            <button type="button" id="cust-confirm-btn" class="w-full bg-gradient-to-r from-coyote-yellow to-coyote-orange text-coyote-black font-bold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-md uppercase font-brand tracking-wider cursor-pointer">
-                <i class="fas fa-plus-circle"></i> Agregar al Pedido (<span id="cust-final-price">$0</span>)
-            </button>
+            <div class="shrink-0 pt-4 border-t border-stone-800">
+                <a id="send-order-btn" href="#" onclick="rastrearEvento('Enviar_Pedido_WhatsApp')" target="_top" class="w-full bg-gradient-to-r from-emerald-500 to-green-500 text-white font-bold py-3.5 px-6 rounded-2xl text-lg transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)] flex items-center justify-center gap-2 opacity-50 pointer-events-none">
+                    <i class="fab fa-whatsapp text-xl"></i> Enviar Pedido
+                </a>
+                <button type="button" onclick="closePopup('cart-popup')" class="w-full text-stone-400 text-xs mt-4 hover:text-white underline transition-colors">
+                    Seguir comprando
+                </button>
+            </div>
         </div>
     </div>
 
     <script>
-        const menuData = {
-            estrella: [
-                { name: "Papi Pollo Personal", price: 22000, desc: "Papas a la francesa, salchichas, huevos de codorniz, filete de pollo picado, tocineta y queso mozzarella.", tag: "ESTRELLA" },
-                { name: "Papi Pollo Grande", price: 30000, desc: "Porción generosa de papas a la francesa, salchichas, huevos de codorniz, filete de pollo picado, tocineta y queso mozzarella.", tag: "ESTRELLA" },
-                { name: "Papi Express Personal", price: 24000, desc: "Papas a la francesa, carne y pollo desmechado, salchichas, huevos de codorniz, tocineta y queso mozzarella.", tag: "ESTRELLA" },
-                { name: "Papi Express Grande", price: 34000, desc: "Para compartir: papas a la francesa, carne y pollo desmechado, salchichas, huevos de codorniz, tocineta y queso mozzarella.", tag: "ESTRELLA" },
-                { name: "Suprema", price: 50000, desc: "La reina de la casa: papas a la francesa, salchichas, huevos de codorniz, longaniza, trocitos de costilla BBQ, carne y pollo desmechado, maicitos, tocineta y queso mozzarella.", tag: "MEGA" },
-                { name: "Churrasco", price: 36000, desc: "Corte jugoso a la parrilla acompañado con papas a la francesa, ensalada de verduras y arepa con queso.", tag: "PARRILLA", customType: "gratinado" },
-                { name: "Filete de Pollo Gratinado", price: 36000, desc: "Pechuga a la parrilla cubierta con abundante queso gratinado, papas a la francesa, ensalada y arepa con queso.", tag: "PARRILLA" }
-            ],
-            salchipapas: [
-                { section: "SALCHIPAPAS" },
-                { name: "Salchipapa Sencilla", price: 18000, desc: "Papas a la francesa, salchichas y huevos de codorniz." },
-                { name: "Salchipapa Especial (Tocineta)", price: 20000, desc: "Papas a la francesa, salchichas, huevos de codorniz, tocineta y queso mozzarella." },
-                { name: "Choripapa (Chorizo de Pollo)", price: 20000, desc: "Papas a la francesa, salchichas, huevos de codorniz, chorizo de pollo y queso mozzarella." },
-                { name: "Papi Pollo Personal", price: 22000, desc: "Papas a la francesa, salchichas, huevos de codorniz, filete de pollo picado, tocineta y queso mozzarella.", tag: "TOP" },
-                { name: "Papi Pollo Grande", price: 30000, desc: "Papas a la francesa, salchichas, huevos de codorniz, filete de pollo picado, tocineta y queso mozzarella.", tag: "TOP" },
-                { name: "Papi Express Personal", price: 24000, desc: "Papas a la francesa, carne y pollo desmechado, salchichas, huevos de codorniz, tocineta y queso mozzarella.", tag: "TOP" },
-                { name: "Papi Express Grande", price: 34000, desc: "Papas a la francesa, carne y pollo desmechado, salchichas, huevos de codorniz, tocineta y queso mozzarella.", tag: "TOP" },
-                { name: "Suprema", price: 50000, desc: "Papas a la francesa, salchichas, huevos de codorniz, longaniza, costilla BBQ, carne y pollo desmechado, maicitos, tocineta y queso mozzarella.", tag: "TOP" },
-                { name: "Papicoste Personal", price: 24000, desc: "Papas a la francesa, salchichas, trocitos de costilla BBQ, tocineta, huevos de codorniz y queso mozzarella." },
-                { name: "Papicoste Grande", price: 34000, desc: "Porción grande con trocitos de costilla BBQ, tocineta, huevos de codorniz y queso mozzarella." },
-                { name: "Papi Enqueso", price: 22000, desc: "Papas a la francesa, dedos de pechuga de pollo crocantes, huevos de codorniz y queso mozzarella." },
-                { name: "Papas Americanas", price: 18000, desc: "Papas a la francesa, salsa de queso tipo cheddar y tocineta crocante." },
-                { section: "PATACÓN O AREPA" },
-                { name: "Patacón o Arepa Pura", price: 28000, desc: "Carne y pollo desmechado, salchichas, maicitos, hogao, huevo de codorniz y queso mozzarella." },
-                { name: "Patacón o Arepa Entripado", price: 28000, desc: "Pollo y carne desmechada, maicitos, hogao, huevo de codorniz y queso mozzarella." }
-            ],
-            burgers: [
-                { section: "HAMBURGUESAS" },
-                { name: "Burger Res Especial", price: 20000, desc: "Pan brioche, carne de res, tocineta, queso mozzarella, lechuga, tomate, ensalada de perro y ripio de papa." },
-                { name: "Burger Pollo Artesanal", price: 20000, desc: "Pan brioche, filete de pollo, tocineta, queso mozzarella, lechuga, tomate, ensalada de perro y ripio de papa." },
-                { name: "Burger Mixta o Doble Carne", price: 28000, desc: "Pan brioche, carne de res, filete de pollo, tocineta, queso mozzarella, lechuga, tomate, ensalada de perro y ripio de papa." },
-                { name: "Burger Trifásica", price: 30000, desc: "Pan brioche, carne de res, tocineta, chorizo de pollo, queso mozzarella, lechuga, tomate, ripio de papa, salsa tártara y ensalada de perro." },
-                { name: "Súper Burger", price: 30000, desc: "Pan brioche, carne de res, pollo y carne desmechada, tocineta, queso mozzarella, lechuga, tomate, ripio de papa y salsa de la casa." },
-                { name: "Burger Deportiva", price: 20000, desc: "Pan brioche, carne de res o pollo, queso tipo cheddar, lechuga, tomate y papas americanas.", customType: "proteina" },
-                { name: "Smash Burger", price: 23000, desc: "Pan brioche, carne de res tipo smash, doble queso tipo cheddar, salsa especial, cebolla caramelizada y papas a la francesa." },
-                { name: "Pulled Beef Burger", price: 23000, desc: "Pan brioche, carne de res en trozos, doble queso cheddar, tocineta crocante, carne desmechada en demiglace de BBQ, piña y papas estilo Big Mac." },
-                { name: "Burger Tocinada", price: 23000, desc: "Pan brioche, proteína a elección (res o pollo), tocineta, queso mozzarella, ripio de papa, ensalada de perro, papas y gaseosa personal.", customType: "proteina" },
-                { section: "PERROS CALIENTES (Con ensalada de perro y ripio de papa)" },
-                { name: "Perro Especial", price: 18000, desc: "Salchicha zenú + tocineta." },
-                { name: "Perra", price: 20000, desc: "Abundante tocineta y queso." },
-                { name: "Perro Suizo", price: 20000, desc: "Longaniza zenú + tocineta." },
-                { name: "Perro Coyote", price: 22000, desc: "Carne desmechada + tocineta." },
-                { name: "Perro Zorra", price: 22000, desc: "Pollo desmechado + tocineta." },
-                { name: "Perro Grilla", price: 22000, desc: "Carne y pollo desmechado + tocineta." },
-                { name: "Perro Sabroso", price: 26000, desc: "Salchicha zenú + carne y pollo desmechado + tocineta." },
-                { name: "Perro Tromp", price: 30000, desc: "Longaniza zenú + carne y pollo desmechado + tocineta + papas a la francesa." },
-                { section: "ENSALADA GOURMET & APLASTADO" },
-                { name: "Aplastado Especial", price: 32000, desc: "Pan brioche, jamón, carne y pollo desmechado, hogao, tocineta, queso mozzarella y huevo de codorniz." },
-                { name: "Ensalada de Pollo", price: 24000, desc: "Filete de pollo en trocitos, lechuga, ensalada de verduras, maicitos, huevos de codorniz y salsa de la casa." },
-                { name: "Ensalada de Atún", price: 24000, desc: "Atún, lechuga, ensalada de verduras, maicitos, huevos de codorniz y salsa de la casa." }
-            ],
-            asados: [
-                { section: "ASADOS AL CARBÓN (Con papas a la francesa, ensalada y arepa con queso)" },
-                { name: "Churrasco", price: 36000, desc: "Corte clásico jugoso a la parrilla con acompañamientos completos.", tag: "TOP", customType: "gratinado" },
-                { name: "Filete de Pollo Gratinado", price: 36000, desc: "Pechuga asada bañada en queso mozzarella gratinado y acompañamientos.", tag: "TOP" },
-                { name: "Punta de Anca", price: 36000, desc: "Corte tradicional tierno y jugoso con papas, ensalada y arepa con queso.", customType: "gratinado" },
-                { name: "Cañón de Cerdo", price: 36000, desc: "Lomo de cerdo asado al punto perfecto con acompañamientos.", customType: "gratinado" },
-                { name: "Costilla BBQ", price: 36000, desc: "Costillas de cerdo bañadas en nuestra salsa BBQ artesanal.", customType: "gratinado" },
-                { name: "Filete de Pollo", price: 36000, desc: "Pechuga de pollo jugosa a la parrilla con papas, ensalada y arepa con queso.", customType: "gratinado" },
-                { name: "Churrasco Premium", price: 40000, desc: "Corte seleccionado de mayor gramaje a la parrilla con acompañamientos.", customType: "gratinado" },
-                { name: "Entrañita", price: 45000, desc: "Corte especial de res ultra jugoso y lleno de sabor a la brasa.", customType: "gratinado" },
-                { name: "Media Porción de Asado", price: 28000, desc: "Porción personal ideal con papas a la francesa, ensalada y arepa con queso.", customType: "gratinado" },
-                { name: "Adición Gratinado para Asado", price: 5000, desc: "Capa extra de queso mozzarella fundido sobre tu corte." },
-                { section: "CHUZOS, LONGANIZA & PICADAS" },
-                { name: "Chuzo de Pollo Artesanal (Solo)", price: 22000, desc: "Acompañado de papas al vapor, ensalada de perro y arepa." },
-                { name: "Chuzo de Pollo Artesanal (Con Papas Francesa)", price: 24000, desc: "Con papas a la francesa, ensalada de perro y arepa." },
-                { name: "Longaniza Zenú (Sola)", price: 22000, desc: "Acompañada de papas al vapor, ensalada de perro y arepa." },
-                { name: "Longaniza Zenú (Con Papas Francesa)", price: 24000, desc: "Con papas a la francesa, ensalada de perro y arepa." },
-                { name: "Picada Pollo", price: 30000, desc: "Carne de cerdo, filete de pollo, chorizo, papas fritas, monedas de plátano, tomate, arepa gratinada y ensalada." },
-                { name: "Picada Especial", price: 38000, desc: "Carne de cerdo, filete de pollo, chorizo, papas fritas, monedas de plátano, tomate, arepa gratinada y ensalada." }
-            ],
-            bebidas: [
-                { section: "BEBIDAS FRÍAS" },
-                { name: "Gaseosa 350 ml", price: 4000, desc: "Variedad de sabores bien fríos." },
-                { name: "Botella de Agua", price: 4000, desc: "Agua pura refrescante." },
-                { name: "Hit / Mr Tea / H2Oh / Mr Polo", price: 4000, desc: "Jugos y tés helados." },
-                { name: "Cerveza Nacional", price: 6000, desc: "Bien fría." },
-                { name: "Cerveza Coronita", price: 6000, desc: "Refrescante." },
-                { name: "Cerveza Corona", price: 8000, desc: "Botella grande bien fría." },
-                { name: "Gaseosa 1.5 Litros", price: 10000, desc: "Ideal para compartir en mesa o domicilio." },
-                { name: "Gaseosa 3 Litros", price: 14000, desc: "Tamaño familiar." },
-                { name: "Vaso con Hielo y Limón", price: 2000, desc: "Acompañamiento refrescante." },
-                { section: "SODAS & MICHELADAS" },
-                { name: "Michelada Tradicional", price: 8000, desc: "Con limón, sal y toque especial." },
-                { name: "Soda Hawaiana", price: 10000, desc: "Refrescante mezcla tropical." },
-                { section: "ADICIONES" },
-                { name: "Moneditas de Plátano con Hogao", price: 7000, desc: "Crocantes con hogao casero." },
-                { name: "Porción de Papas a la Francesa", price: 7000, desc: "Doraditas y crocantes." },
-                { name: "Porción de Yucas", price: 7000, desc: "Fritas y suaves por dentro." },
-                { name: "Porción de Ensalada", price: 7000, desc: "Fresca del día." },
-                { name: "Porción de Tocineta", price: 7000, desc: "Extra crocante." },
-                { name: "Porción de Queso de Sánduche", price: 7000, desc: "Para darle más sabor a tu plato." },
-                { name: "Porción de Tártara / De la Casa", price: 7000, desc: "4 onzas de nuestra salsa insignia." },
-                { name: "Porción de Salchicha", price: 8000, desc: "Adición de salchicha." },
-                { name: "Porción de Costillas BBQ", price: 15000, desc: "Trocitos jugosos de costilla." },
-                { name: "Tarro de Tártara", price: 18000, desc: "Para llevar a casa." },
-                { name: "Para Empacar", price: 1000, desc: "Empaque desechable." }
-            ]
-        };
-
-        const formatCOP = (amount) => "$" + Number(amount || 0).toLocaleString('es-CO');
-
-        const escapeAttr = (str) => String(str).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-
-        const renderMenuCategory = (categoryKey, containerId) => {
-            const container = document.getElementById(containerId);
-            if (!container) return;
-
-            container.innerHTML = menuData[categoryKey].map(item => {
-                if (item.section) {
-                    return `
-                        <div class="pt-2 pb-1 px-1">
-                            <h3 class="font-brand text-sm uppercase tracking-widest text-coyote-yellow border-l-4 border-coyote-orange pl-2.5 bg-coyote-black/60 py-1.5 rounded-r-lg">
-                                ${item.section}
-                            </h3>
-                        </div>
-                    `;
-                }
-
-                const badgeHtml = item.tag 
-                    ? `<span class="bg-coyote-orange text-white text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider ml-1.5 align-middle">${item.tag}</span>` 
-                    : '';
-
-                const safeName = escapeAttr(item.name);
-                const clickAction = item.customType
-                    ? `openCustomizeModal('${safeName}', ${item.price}, '${item.customType}')`
-                    : `addToCart('${safeName}', ${item.price})`;
-
-                return `
-                    <div class="bg-[#1b1b1b] rounded-2xl border border-coyote-gray/25 shadow-md p-3 flex items-center justify-between gap-3 transition-all hover:border-coyote-yellow/50 hover:bg-[#222222]">
-                        <div class="flex-1 text-left">
-                            <h4 class="font-bold text-sm text-white leading-snug">
-                                ${item.name}${badgeHtml}
-                            </h4>
-                            <p class="text-[11px] text-coyote-beige/80 mt-1 leading-snug">${item.desc}</p>
-                            <p class="text-coyote-yellow font-extrabold text-sm mt-1.5">${formatCOP(item.price)}</p>
-                        </div>
-                        <button type="button" onclick="${clickAction}" class="bg-gradient-to-tr from-coyote-yellow to-amber-400 hover:from-coyote-orange hover:to-coyote-orange text-coyote-black hover:text-white w-9 h-9 rounded-xl flex items-center justify-center text-sm shrink-0 transition-all hover:scale-110 shadow-md font-bold cursor-pointer" aria-label="Agregar ${item.name}">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                `;
-            }).join('');
-        };
-
-        renderMenuCategory('estrella', 'estrella-list');
-        renderMenuCategory('salchipapas', 'salchipapas-list');
-        renderMenuCategory('burgers', 'burgers-list');
-        renderMenuCategory('asados', 'asados-list');
-        renderMenuCategory('bebidas', 'bebidas-list');
+        const FOCACCIA_URL = 'https://soyconectaplus.com/FocacciaExpress/';
 
         const openPopup = (popupId) => {
-            const el = document.getElementById(popupId);
-            if (el) el.classList.remove('hidden');
+            document.getElementById(popupId).classList.remove('hidden');
         };
-
         const closePopup = (popupId) => {
-            const el = document.getElementById(popupId);
-            if (el) el.classList.add('hidden');
+            document.getElementById(popupId).classList.add('hidden');
         };
 
-        document.getElementById('estrella-btn')?.addEventListener('click', () => {
-            rastrearEvento('Abrir_Productos_Estrella');
-            openPopup('estrella-popup');
-        });
-        document.getElementById('salchipapas-btn')?.addEventListener('click', () => {
-            rastrearEvento('Menu_Salchipapas');
-            openPopup('salchipapas-popup');
-        });
-        document.getElementById('burgers-btn')?.addEventListener('click', () => {
-            rastrearEvento('Menu_Burgers_Perros');
-            openPopup('burgers-popup');
-        });
-        document.getElementById('asados-btn')?.addEventListener('click', () => {
-            rastrearEvento('Menu_Asados');
-            openPopup('asados-popup');
-        });
-        document.getElementById('bebidas-btn')?.addEventListener('click', () => {
-            rastrearEvento('Menu_Bebidas');
-            openPopup('bebidas-popup');
-        });
-        document.getElementById('location-btn')?.addEventListener('click', () => {
-            rastrearEvento('Clic_Ubicacion');
-            openPopup('location-popup');
-        });
-
-        ['location-popup', 'share-popup', 'install-popup', 'cart-popup', 'customize-popup'].forEach(id => {
-            document.getElementById(id)?.addEventListener('click', (e) => {
-                if (e.target.id === id) closePopup(id);
-            });
-        });
-
-        const updateStoreStatus = () => {
-            const now = new Date();
-            const minutesNow = now.getHours() * 60 + now.getMinutes();
-            const openMinutes = 17 * 60;
-            const closeMinutes = 23 * 60 + 30;
-            const isOpen = minutesNow >= openMinutes && minutesNow <= closeMinutes;
-
-            const badge = document.getElementById('store-status-badge');
-            const dot = document.getElementById('store-status-dot');
-            const text = document.getElementById('store-status-text');
-            if (!badge || !dot || !text) return;
-
-            if (isOpen) {
-                badge.className = "absolute top-3 left-1/2 -translate-x-1/2 bg-coyote-black/90 backdrop-blur-md border border-emerald-400/60 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md whitespace-nowrap";
-                dot.className = "w-2 h-2 rounded-full bg-emerald-400 animate-ping";
-                text.className = "text-[10px] font-bold text-emerald-300 tracking-wide uppercase";
-                text.innerText = "Abierto ahora • Cierra 11:30 PM";
-            } else {
-                badge.className = "absolute top-3 left-1/2 -translate-x-1/2 bg-coyote-black/90 backdrop-blur-md border border-coyote-orange/60 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md whitespace-nowrap";
-                dot.className = "w-2 h-2 rounded-full bg-coyote-orange";
-                text.className = "text-[10px] font-bold text-coyote-beige tracking-wide uppercase";
-                text.innerText = "Cerrado • Abrimos 5:00 PM";
-            }
-        };
-        updateStoreStatus();
-        setInterval(updateStoreStatus, 60000);
-
-        let currentCustomSelection = { name: "", price: 0 };
-
-        window.openCustomizeModal = (baseName, basePrice, customType) => {
-            const titleEl = document.getElementById('cust-product-title');
-            const questionEl = document.getElementById('cust-question');
-            const optionsContainer = document.getElementById('cust-options-container');
-            const finalPriceEl = document.getElementById('cust-final-price');
-
-            titleEl.innerText = baseName;
-
-            let options = [];
-            if (customType === 'proteina') {
-                questionEl.innerText = "¿Qué proteína prefieres para tu hamburguesa?";
-                options = [
-                    { label: "Carne de Res", suffix: " (Res)", extra: 0 },
-                    { label: "Filete de Pollo", suffix: " (Pollo)", extra: 0 }
-                ];
-            } else if (customType === 'gratinado') {
-                questionEl.innerText = "¿Deseas agregar gratinado con queso mozzarella?";
-                options = [
-                    { label: "Sin gratinar (Tradicional)", suffix: "", extra: 0 },
-                    { label: "Con Queso Gratinado (+$5.000)", suffix: " + Gratinado", extra: 5000 }
-                ];
-            }
-
-            const selectOption = (idx) => {
-                const opt = options[idx];
-                currentCustomSelection = {
-                    name: `${baseName}${opt.suffix}`,
-                    price: basePrice + opt.extra
-                };
-                finalPriceEl.innerText = formatCOP(currentCustomSelection.price);
-
-                options.forEach((_, i) => {
-                    const btn = document.getElementById(`cust-opt-${i}`);
-                    if (btn) {
-                        if (i === idx) {
-                            btn.className = "w-full p-3 rounded-xl border-2 border-coyote-yellow bg-coyote-yellow/15 text-white text-xs font-bold flex items-center justify-between transition-all text-left cursor-pointer";
-                            btn.querySelector('.opt-check').innerHTML = '<i class="fas fa-circle-check text-coyote-yellow text-base"></i>';
-                        } else {
-                            btn.className = "w-full p-3 rounded-xl border border-coyote-gray/40 bg-coyote-black text-coyote-beige text-xs font-medium flex items-center justify-between transition-all text-left hover:border-coyote-gray cursor-pointer";
-                            btn.querySelector('.opt-check').innerHTML = '<i class="far fa-circle text-coyote-gray text-base"></i>';
-                        }
-                    }
-                });
-            };
-
-            optionsContainer.innerHTML = options.map((opt, idx) => `
-                <button type="button" id="cust-opt-${idx}" class="w-full p-3 rounded-xl border border-coyote-gray/40 bg-coyote-black text-coyote-beige text-xs font-medium flex items-center justify-between transition-all text-left cursor-pointer">
-                    <span>${opt.label}</span>
-                    <span class="opt-check"></span>
-                </button>
-            `).join('');
-
-            options.forEach((_, idx) => {
-                document.getElementById(`cust-opt-${idx}`).onclick = () => selectOption(idx);
-            });
-
-            selectOption(0);
-
-            document.getElementById('cust-confirm-btn').onclick = () => {
-                addToCart(currentCustomSelection.name, currentCustomSelection.price);
-                closePopup('customize-popup');
-            };
-
-            openPopup('customize-popup');
-        };
-
+        // --- Lógica: Popup de Compartir / QR ---
         const shareBtn = document.getElementById('share-btn');
+        const sharePopup = 'share-popup';
         const qrcodeContainer = document.getElementById('qrcode-container');
         const shareUrlInput = document.getElementById('share-url');
 
-        shareBtn?.addEventListener('click', () => {
-            rastrearEvento('Clic_Compartir');
-            const url = window.location.href.startsWith('http') ? window.location.href : 'https://soyconectaplus.com/CoyoteExpress/';
+        shareBtn.addEventListener('click', () => {
+            const url = FOCACCIA_URL;
             shareUrlInput.value = url;
-
+            
             shareUrlInput.onclick = () => {
                 shareUrlInput.select();
                 try {
-                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                    if (navigator.clipboard) { 
                         navigator.clipboard.writeText(url).then(() => {
                             const originalValue = shareUrlInput.value;
                             shareUrlInput.value = "¡Enlace copiado!";
                             setTimeout(() => shareUrlInput.value = originalValue, 2000);
-                        }).catch(() => document.execCommand('copy'));
+                        }).catch(() => { 
+                            document.execCommand('copy');
+                        });
                     } else {
                         document.execCommand('copy');
                     }
-                } catch (err) {}
+                } catch (err) {
+                    console.error('Error al copiar:', err);
+                }
             };
 
             qrcodeContainer.innerHTML = '';
-            if (typeof QRCode === 'function') {
-                new QRCode(qrcodeContainer, {
-                    text: url,
-                    width: 160,
-                    height: 160,
-                    colorDark: "#121212",
-                    colorLight: "#ffffff",
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-            }
-
-            openPopup('share-popup');
+            new QRCode(qrcodeContainer, {
+                text: url,
+                width: 160,
+                height: 160,
+                colorDark : "#0c0a09",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+            
+            openPopup(sharePopup);
         });
 
-        document.getElementById('close-share-popup-btn')?.addEventListener('click', () => closePopup('share-popup'));
+        document.getElementById('close-share-popup-btn').addEventListener('click', () => closePopup(sharePopup));
+        document.getElementById(sharePopup).addEventListener('click', (e) => {
+            if (e.target.id === sharePopup) closePopup(sharePopup);
+        });
 
+        // --- Lógica: Popup de Congelados ---
+        const congeladosBtn = document.getElementById('congelados-btn');
+        const congeladosPopup = 'congelados-popup';
+
+        congeladosBtn.addEventListener('click', () => openPopup(congeladosPopup));
+        document.getElementById('close-congelados-popup-btn').addEventListener('click', () => closePopup(congeladosPopup));
+        document.getElementById(congeladosPopup).addEventListener('click', (e) => {
+            if (e.target.id === congeladosPopup) closePopup(congeladosPopup);
+        });
+
+        // --- Lógica: Popup de Panes ---
+        const panesBtn = document.getElementById('panes-btn');
+        const panesPopup = 'panes-popup';
+
+        panesBtn.addEventListener('click', () => openPopup(panesPopup));
+        document.getElementById('close-panes-popup-btn').addEventListener('click', () => closePopup(panesPopup));
+        document.getElementById(panesPopup).addEventListener('click', (e) => {
+            if (e.target.id === panesPopup) closePopup(panesPopup);
+        });
+
+        // --- Lógica: Popup de Tortas ---
+        const tortasBtn = document.getElementById('tortas-btn');
+        const tortasPopup = 'tortas-popup';
+
+        tortasBtn.addEventListener('click', () => openPopup(tortasPopup));
+        document.getElementById('close-tortas-popup-btn').addEventListener('click', () => closePopup(tortasPopup));
+        document.getElementById(tortasPopup).addEventListener('click', (e) => {
+            if (e.target.id === tortasPopup) closePopup(tortasPopup);
+        });
+
+        // --- Lógica: Guardar Contacto (vCard) ---
         const saveContactBtn = document.getElementById('save-contact-btn');
-        if (saveContactBtn) {
-            const vCardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Coyote Express\nORG:Coyote Express - Comidas Rápidas y Asados\nTEL;TYPE=WORK,VOICE:+573168324287\nTEL;TYPE=CELL,VOICE:+573168324287\nNOTE:Horario: Lunes a Domingo de 5:00 PM a 11:30 PM\nURL:https://soyconectaplus.com/CoyoteExpress/\nURL;TYPE=Facebook:https://www.facebook.com/share/1R4vQWtB2B/\nURL;TYPE=Instagram:https://www.instagram.com/coyotexpresspb?cnvx=MW5tZmFvcTk3ajl3Mw%3D%3D&utm_source=qr\nURL;TYPE=TikTok:https://www.tiktok.com/@coyote.express?_r=1&_t=ZS-9BZKEZOgxec\nEND:VCARD`;
-            saveContactBtn.href = `data:text/vcard;charset=utf-8,${encodeURIComponent(vCardData)}`;
+        const vCardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Focaccia Express\nORG:Focaccia Express\nTEL;TYPE=WORK,VOICE:+573017824317\nTEL;TYPE=CELL,VOICE:+573017824317\nADR;TYPE=WORK:;;Tu Dirección;Tu Ciudad;Tu Departamento;;Colombia\nURL:${FOCACCIA_URL}\nEND:VCARD`;
+        saveContactBtn.href = `data:text/vcard;charset=utf-8,${encodeURIComponent(vCardData)}`;
+
+        // --- Lógica: Popup de Instalación ---
+        const installBtn = document.getElementById('install-btn');
+        const installPopup = 'install-popup';
+
+        if (installBtn) {
+            installBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openPopup(installPopup);
+            });
         }
-
-        document.getElementById('install-btn')?.addEventListener('click', () => {
-            rastrearEvento('Clic_Instalar_PWA');
-            openPopup('install-popup');
+        document.getElementById('close-install-popup-btn')?.addEventListener('click', () => closePopup(installPopup));
+        document.getElementById(installPopup)?.addEventListener('click', (e) => {
+            if (e.target.id === installPopup) closePopup(installPopup);
         });
-        document.getElementById('close-install-popup-btn')?.addEventListener('click', () => closePopup('install-popup'));
+        
+        // --- Lógica: Popup de Cursos ---
+        const cursosBtn = document.getElementById('cursos-btn');
+        const cursosPopup = 'cursos-popup';
 
-        const mainOrderBtn = document.getElementById('main-order-btn');
+        if (cursosBtn) {
+            cursosBtn.addEventListener('click', () => openPopup(cursosPopup));
+        }
+        document.getElementById('close-cursos-popup-btn')?.addEventListener('click', () => closePopup(cursosPopup));
+        document.getElementById(cursosPopup)?.addEventListener('click', (e) => {
+            if (e.target.id === cursosPopup) closePopup(cursosPopup);
+        });
+
+        // --- Lógica: Carrito de Compras ---
+        const cartPopup = 'cart-popup';
         const floatingCartBtn = document.getElementById('floating-cart-btn');
         const closeCartBtn = document.getElementById('close-cart-popup-btn');
         const cartItemsContainer = document.getElementById('cart-items');
         const sendOrderBtn = document.getElementById('send-order-btn');
-        const cartTotalBox = document.getElementById('cart-total-box');
-        const cartTotalAmount = document.getElementById('cart-total-amount');
-        const clearCartBtn = document.getElementById('clear-cart-btn');
-        const deliveryForm = document.getElementById('delivery-form');
         const toast = document.getElementById('toast');
         const toastMsg = document.getElementById('toast-msg');
-
         let cart = {};
-        let deliveryMode = 'Domicilio';
 
-        const openCartModal = () => {
+        floatingCartBtn.addEventListener('click', () => {
             renderCart();
-            updateWhatsAppLink();
-            openPopup('cart-popup');
-        };
-
-        mainOrderBtn?.addEventListener('click', () => {
-            rastrearEvento('Clic_Boton_Principal_Pedido');
-            openCartModal();
+            openPopup(cartPopup);
         });
 
-        floatingCartBtn?.addEventListener('click', () => {
-            rastrearEvento('Abrir_Carrito_Flotante');
-            openCartModal();
+        closeCartBtn.addEventListener('click', () => closePopup(cartPopup));
+        document.getElementById(cartPopup).addEventListener('click', (e) => {
+            if (e.target.id === cartPopup) closePopup(cartPopup);
         });
 
-        closeCartBtn?.addEventListener('click', () => closePopup('cart-popup'));
-
-        window.addToCart = (itemName, price) => {
+        window.addToCart = (itemName) => {
             if (cart[itemName]) {
-                cart[itemName].qty++;
+                cart[itemName]++;
             } else {
-                cart[itemName] = { qty: 1, price: price };
+                cart[itemName] = 1;
             }
-            updateCartUI();
+            updateCartBadge();
             showToast(itemName);
-            rastrearEvento(`Agregar_${itemName.replace(/[^a-zA-Z0-9]+/g, '_')}`);
-        };
-
-        window.setDeliveryMode = (mode) => {
-            deliveryMode = mode;
-            const btnDom = document.getElementById('btn-mode-domicilio');
-            const btnRec = document.getElementById('btn-mode-recoger');
-            const addrContainer = document.getElementById('address-field-container');
-
-            if (mode === 'Domicilio') {
-                btnDom.className = "py-2 px-2.5 rounded-xl text-xs font-bold border border-coyote-yellow bg-coyote-yellow text-coyote-black flex items-center justify-center gap-1.5 transition-all cursor-pointer";
-                btnRec.className = "py-2 px-2.5 rounded-xl text-xs font-bold border border-coyote-gray/40 bg-[#1e1e1e] text-coyote-beige flex items-center justify-center gap-1.5 transition-all cursor-pointer";
-                addrContainer.classList.remove('hidden');
-            } else {
-                btnRec.className = "py-2 px-2.5 rounded-xl text-xs font-bold border border-coyote-yellow bg-coyote-yellow text-coyote-black flex items-center justify-center gap-1.5 transition-all cursor-pointer";
-                btnDom.className = "py-2 px-2.5 rounded-xl text-xs font-bold border border-coyote-gray/40 bg-[#1e1e1e] text-coyote-beige flex items-center justify-center gap-1.5 transition-all cursor-pointer";
-                addrContainer.classList.add('hidden');
-            }
-            updateWhatsAppLink();
+            rastrearEvento(`Agregar_${itemName.replace(/\s+/g, '_')}`);
         };
 
         window.decreaseCart = (itemName) => {
             if (cart[itemName]) {
-                cart[itemName].qty--;
-                if (cart[itemName].qty <= 0) delete cart[itemName];
+                cart[itemName]--;
+                if (cart[itemName] <= 0) delete cart[itemName];
             }
-            updateCartUI();
+            updateCartBadge();
             renderCart();
         };
 
         window.increaseCart = (itemName) => {
             if (cart[itemName]) {
-                cart[itemName].qty++;
+                cart[itemName]++;
             }
-            updateCartUI();
+            updateCartBadge();
             renderCart();
         };
 
-        window.clearCart = () => {
-            cart = {};
-            updateCartUI();
-            renderCart();
-        };
-
-        const updateCartUI = () => {
-            const entries = Object.values(cart);
-            const totalCount = entries.reduce((sum, item) => sum + item.qty, 0);
-            const totalMoney = entries.reduce((sum, item) => sum + (item.qty * item.price), 0);
-
-            document.querySelectorAll('.cart-badge, .cart-badge-inline').forEach(badge => {
-                badge.innerText = totalCount;
-                if (totalCount > 0) badge.classList.remove('hidden');
-                else badge.classList.add('hidden');
+        const updateCartBadge = () => {
+            const count = Object.values(cart).reduce((a, b) => a + b, 0);
+            const badges = document.querySelectorAll('.cart-badge');
+            
+            badges.forEach(b => {
+                b.innerText = count;
+                if (count > 0) b.classList.remove('hidden');
+                else b.classList.add('hidden');
             });
-
-            if (totalCount > 0) {
+            
+            if (count > 0) {
                 sendOrderBtn.classList.remove('opacity-50', 'pointer-events-none');
                 sendOrderBtn.classList.add('hover:brightness-110');
-                cartTotalBox.classList.remove('hidden');
-                clearCartBtn.classList.remove('hidden');
-                deliveryForm.classList.remove('hidden');
-                cartTotalAmount.innerText = formatCOP(totalMoney);
             } else {
                 sendOrderBtn.classList.add('opacity-50', 'pointer-events-none');
                 sendOrderBtn.classList.remove('hover:brightness-110');
-                cartTotalBox.classList.add('hidden');
-                clearCartBtn.classList.add('hidden');
-                deliveryForm.classList.add('hidden');
             }
-
-            updateWhatsAppLink(totalMoney);
+            updateWhatsAppLink();
         };
 
         const renderCart = () => {
@@ -1096,29 +816,24 @@
             if (items.length === 0) {
                 cartItemsContainer.innerHTML = `
                     <div class="text-center py-10">
-                        <i class="fas fa-burger text-4xl text-coyote-gray/40 mb-3"></i>
-                        <p class="text-coyote-beige text-sm font-medium">Aún no has agregado productos.</p>
-                        <p class="text-coyote-gray text-xs mt-1">Explora nuestros Productos Estrella o la carta.</p>
+                        <i class="fas fa-basket-shopping text-4xl text-stone-700 mb-3"></i>
+                        <p class="text-stone-400 text-sm">Tu pedido está vacío.</p>
                     </div>`;
                 return;
             }
 
-            cartItemsContainer.innerHTML = items.map(([name, data]) => {
-                const safeName = escapeAttr(name);
-                return `
-                    <div class="bg-[#222222] rounded-2xl p-3 flex justify-between items-center border border-coyote-gray/30 shadow-sm">
-                        <div class="flex-1 pr-2 text-left">
-                            <h5 class="text-xs font-bold text-white leading-tight">${name}</h5>
-                            <p class="text-[11px] text-coyote-yellow font-semibold mt-0.5">${formatCOP(data.price * data.qty)} <span class="text-[9px] text-coyote-gray font-normal">(${formatCOP(data.price)} c/u)</span></p>
-                        </div>
-                        <div class="flex items-center gap-2.5 bg-coyote-black rounded-full px-2 py-1 border border-coyote-gray/40">
-                            <button type="button" onclick="decreaseCart('${safeName}')" class="text-coyote-beige hover:text-coyote-orange w-6 h-6 flex items-center justify-center font-bold text-lg cursor-pointer">&minus;</button>
-                            <span class="text-white text-xs w-4 text-center font-bold">${data.qty}</span>
-                            <button type="button" onclick="increaseCart('${safeName}')" class="text-coyote-beige hover:text-coyote-yellow w-6 h-6 flex items-center justify-center font-bold text-lg cursor-pointer">+</button>
-                        </div>
+            cartItemsContainer.innerHTML = items.map(([name, qty]) => `
+                <div class="bg-stone-800/60 rounded-2xl p-3 flex justify-between items-center border border-stone-700 shadow-sm">
+                    <div class="flex-1 pr-3">
+                        <h5 class="text-sm font-bold text-stone-200 leading-tight">${name}</h5>
                     </div>
-                `;
-            }).join('');
+                    <div class="flex items-center gap-3 bg-stone-950 rounded-full px-2 py-1 border border-stone-800">
+                        <button type="button" onclick="decreaseCart('${name}')" class="text-stone-400 hover:text-amber-400 w-6 h-6 flex items-center justify-center font-bold text-xl">&minus;</button>
+                        <span class="text-white text-sm w-4 text-center font-bold">${qty}</span>
+                        <button type="button" onclick="increaseCart('${name}')" class="text-stone-400 hover:text-amber-400 w-6 h-6 flex items-center justify-center font-bold text-xl">+</button>
+                    </div>
+                </div>
+            `).join('');
         };
 
         const showToast = (itemName) => {
@@ -1131,38 +846,24 @@
             }, 2000);
         };
 
-        const updateWhatsAppLink = (passedTotal) => {
+        const updateWhatsAppLink = () => {
             const items = Object.entries(cart);
             if (items.length === 0) {
                 sendOrderBtn.href = "#";
                 return;
             }
 
-            const totalMoney = typeof passedTotal === 'number'
-                ? passedTotal
-                : items.reduce((sum, [, data]) => sum + (data.qty * data.price), 0);
-
-            const address = document.getElementById('order-address')?.value.trim() || '';
-            const payment = document.getElementById('order-payment')?.value || 'Efectivo';
-            const notes = document.getElementById('order-notes')?.value.trim() || '';
-
-            let text = "¡Hola *Coyote Express*! 🐺🔥 Quisiera hacer el siguiente pedido:\n\n";
-            items.forEach(([name, data]) => {
-                text += `▪️ *${data.qty}x* ${name} — ${formatCOP(data.price * data.qty)}\n`;
+            let text = "¡Hola! Quisiera hacer el siguiente pedido en Focaccia Express:\n\n";
+            items.forEach(([name, qty]) => {
+                text += `🍞 *${qty}x* ${name}\n`;
             });
-            text += `\n💰 *Total estimado:* ${formatCOP(totalMoney)}\n`;
-            text += `🛵 *Modalidad:* ${deliveryMode}\n`;
-            if (deliveryMode === 'Domicilio') {
-                text += `📍 *Dirección:* ${address || 'Por confirmar'}\n`;
-            }
-            text += `💳 *Método de pago:* ${payment}\n`;
-            if (notes) {
-                text += `📝 *Notas:* ${notes}\n`;
-            }
+            text += "\n¡Gracias!";
 
-            sendOrderBtn.href = `https://wa.me/573168324287?text=${encodeURIComponent(text)}`;
+            const encodedText = encodeURIComponent(text);
+            sendOrderBtn.href = `https://api.whatsapp.com/send?phone=573017824317&text=${encodedText}`;
         };
 
+        // --- Lógica PWA: Service Worker ---
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 const swCode = `
@@ -1171,7 +872,9 @@
                     self.addEventListener('fetch', (e) => { }); 
                 `;
                 const blob = new Blob([swCode], { type: 'application/javascript' });
-                navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(() => {});
+                navigator.serviceWorker.register(URL.createObjectURL(blob))
+                    .then(() => console.log('PWA Service Worker Registrado para Focaccia Express.'))
+                    .catch((err) => console.log('Error registrando Service Worker:', err));
             });
         }
     </script>
